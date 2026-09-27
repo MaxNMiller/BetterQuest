@@ -1,0 +1,109 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/BattleHud.uss" />
+    <ui:VisualElement name="safe-area-root" class="safe-area-root" picking-mode="Ignore">
+        <ui:VisualElement name="hud-root" class="hud-root" picking-mode="Ignore">
+            <ui:VisualElement name="nameplate" class="surface-panel shadow-soft nameplate">
+                <ui:VisualElement class="nameplate__row">
+                    <ui:VisualElement name="monster-gem" class="element-badge element-badge--sm nameplate__gem">
+                        <ui:VisualElement class="element-badge__icon el-icon" />
+                    </ui:VisualElement>
+                    <ui:Label name="monster-name-label" text="Drowsy Gloob" class="t-h2 nameplate__name" />
+                    <ui:VisualElement name="weakness-chip" class="chip chip--weak nameplate__chip">
+                        <ui:VisualElement class="chip__icon el-icon" />
+                        <ui:Label text="WEAK" class="chip__label nameplate__chip-weak" />
+                        <ui:Label name="monster-level-label" text="Rest" class="chip__label" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement class="nameplate__hp">
+                    <ui:VisualElement class="icon icon--sm icon--heart nameplate__heart" />
+                    <ui:VisualElement name="hp-bar-track" class="bar hp-bar-track">
+                        <ui:VisualElement name="hp-bar-trail" class="bar__trail" />
+                        <ui:VisualElement name="hp-bar-fill" class="bar__fill" />
+                        <ui:VisualElement class="bar__shine" />
+                    </ui:VisualElement>
+                    <ui:Label name="hp-label" text="0 / 0" class="t-caption t-num hp-label" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="monster-anchor" class="monster-anchor" picking-mode="Ignore" />
+            <ui:VisualElement class="hud-spacer" picking-mode="Ignore" />
+
+            <ui:VisualElement name="attack-sheet" class="surface-sheet attack-sheet safe-bleed-bottom">
+                <ui:VisualElement name="attack-fade-edge" class="fade-edge fade-edge--above attack-fade-edge" picking-mode="Ignore" />
+                <ui:VisualElement name="toast-container" class="toast-container" picking-mode="Ignore" />
+                <ui:Label name="attack-header" text="ACTIONS · TAP WHEN DONE IN REAL LIFE" class="t-label attack-header" />
+                <ui:VisualElement name="attack-grid" class="attack-grid">
+                    <ui:Button name="slot-0" class="surface-card attack-slot">
+                        <ui:VisualElement name="slot-0-badge" class="element-badge element-badge--sm attack-slot__badge">
+                            <ui:VisualElement name="slot-0-icon" class="element-badge__icon el-icon" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="attack-slot__text">
+                            <ui:VisualElement class="attack-slot__meta">
+                                <ui:Label name="slot-0-element" text="ELEMENT" class="t-label attack-slot__element" />
+                                <ui:Label name="slot-0-level" text="Lv 1" class="chip chip--count attack-slot__level" />
+                                <ui:Label name="slot-0-count" text="+1" class="chip chip--count attack-slot__count" />
+                            </ui:VisualElement>
+                            <ui:Label name="slot-0-label" text="Habit" class="t-clamp-2 attack-slot__name" />
+                        </ui:VisualElement>
+                    </ui:Button>
+                    <ui:Button name="slot-1" class="surface-card attack-slot">
+                        <ui:VisualElement name="slot-1-badge" class="element-badge element-badge--sm attack-slot__badge">
+                            <ui:VisualElement name="slot-1-icon" class="element-badge__icon el-icon" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="attack-slot__text">
+                            <ui:VisualElement class="attack-slot__meta">
+                                <ui:Label name="slot-1-element" text="ELEMENT" class="t-label attack-slot__element" />
+                                <ui:Label name="slot-1-level" text="Lv 1" class="chip chip--count attack-slot__level" />
+                                <ui:Label name="slot-1-count" text="+1" class="chip chip--count attack-slot__count" />
+                            </ui:VisualElement>
+                            <ui:Label name="slot-1-label" text="Habit" class="t-clamp-2 attack-slot__name" />
+                        </ui:VisualElement>
+                    </ui:Button>
+                    <ui:Button name="slot-2" class="surface-card attack-slot">
+                        <ui:VisualElement name="slot-2-badge" class="element-badge element-badge--sm attack-slot__badge">
+                            <ui:VisualElement name="slot-2-icon" class="element-badge__icon el-icon" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="attack-slot__text">
+                            <ui:VisualElement class="attack-slot__meta">
+                                <ui:Label name="slot-2-element" text="ELEMENT" class="t-label attack-slot__element" />
+                                <ui:Label name="slot-2-level" text="Lv 1" class="chip chip--count attack-slot__level" />
+                                <ui:Label name="slot-2-count" text="+1" class="chip chip--count attack-slot__count" />
+                            </ui:VisualElement>
+                            <ui:Label name="slot-2-label" text="Habit" class="t-clamp-2 attack-slot__name" />
+                        </ui:VisualElement>
+                    </ui:Button>
+                    <ui:Button name="slot-3" class="surface-card attack-slot">
+                        <ui:VisualElement name="slot-3-badge" class="element-badge element-badge--sm attack-slot__badge">
+                            <ui:VisualElement name="slot-3-icon" class="element-badge__icon el-icon" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="attack-slot__text">
+                            <ui:VisualElement class="attack-slot__meta">
+                                <ui:Label name="slot-3-element" text="ELEMENT" class="t-label attack-slot__element" />
+                                <ui:Label name="slot-3-level" text="Lv 1" class="chip chip--count attack-slot__level" />
+                                <ui:Label name="slot-3-count" text="+1" class="chip chip--count attack-slot__count" />
+                            </ui:VisualElement>
+                            <ui:Label name="slot-3-label" text="Habit" class="t-clamp-2 attack-slot__name" />
+                        </ui:VisualElement>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:Button name="slot-4" class="surface-card attack-slot attack-slot--weakness slot--featured">
+                    <ui:VisualElement name="slot-4-badge" class="element-badge element-badge--sm attack-slot__badge">
+                        <ui:VisualElement name="slot-4-icon" class="element-badge__icon el-icon" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="attack-slot__text">
+                        <ui:VisualElement class="attack-slot__meta">
+                            <ui:Label name="slot-4-element" text="ELEMENT" class="t-label attack-slot__element" />
+                            <ui:Label name="slot-4-ribbon" text="· SUPER EFFECTIVE ×2" class="t-label attack-slot__ribbon" />
+                            <ui:Label name="slot-4-level" text="Lv 1" class="chip chip--count attack-slot__level" />
+                            <ui:Label name="slot-4-count" text="+1" class="chip chip--count attack-slot__count" />
+                        </ui:VisualElement>
+                        <ui:Label name="slot-4-label" text="Habit" class="t-clamp-2 attack-slot__name" />
+                    </ui:VisualElement>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="scene-scrim" class="scene-scrim" picking-mode="Ignore" />
+</ui:UXML>

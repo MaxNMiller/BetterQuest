@@ -1,0 +1,88 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="Dashboard" src="project://database/Assets/_Project/UI/UXML/Dashboard.uxml" />
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Overlays.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Dashboard.uss" />
+    <ui:VisualElement name="safe-area-root" class="safe-area-root" picking-mode="Ignore">
+        <ui:VisualElement name="level-up-panel" class="overlay-backdrop level-up-panel">
+            <ui:VisualElement name="level-up-content" class="level-up-content">
+                <ui:Label text="Level Up!" class="level-up-title t-display" />
+                <ui:Label text="Choose an element to strengthen" class="level-up-subtitle t-body" />
+                <ui:VisualElement name="level-up-grid" class="level-up-grid">
+                    <ui:Button name="level-up-card-0" class="surface-card level-up-card">
+                        <ui:VisualElement class="level-up-card__top">
+                            <ui:VisualElement class="element-badge element-badge--md"><ui:VisualElement class="element-badge__icon el-icon" /></ui:VisualElement>
+                            <ui:VisualElement class="level-up-card__text">
+                                <ui:Label name="level-up-card-0-text" text="Rest" class="t-body-lg level-up-card__name" />
+                                <ui:Label name="level-up-card-0-levels" text="Lv 1 → 2" class="t-caption t-num level-up-card__levels" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Label name="level-up-card-0-subtitle" class="level-up-card__subtitle" />
+                    </ui:Button>
+                    <ui:Button name="level-up-card-1" class="surface-card level-up-card">
+                        <ui:VisualElement class="level-up-card__top">
+                            <ui:VisualElement class="element-badge element-badge--md"><ui:VisualElement class="element-badge__icon el-icon" /></ui:VisualElement>
+                            <ui:VisualElement class="level-up-card__text">
+                                <ui:Label name="level-up-card-1-text" text="Self Care" class="t-body-lg level-up-card__name" />
+                                <ui:Label name="level-up-card-1-levels" text="Lv 1 → 2" class="t-caption t-num level-up-card__levels" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Label name="level-up-card-1-subtitle" class="level-up-card__subtitle" />
+                    </ui:Button>
+                    <ui:Button name="level-up-card-2" class="surface-card level-up-card">
+                        <ui:VisualElement class="level-up-card__top">
+                            <ui:VisualElement class="element-badge element-badge--md"><ui:VisualElement class="element-badge__icon el-icon" /></ui:VisualElement>
+                            <ui:VisualElement class="level-up-card__text">
+                                <ui:Label name="level-up-card-2-text" text="Food" class="t-body-lg level-up-card__name" />
+                                <ui:Label name="level-up-card-2-levels" text="Lv 1 → 2" class="t-caption t-num level-up-card__levels" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Label name="level-up-card-2-subtitle" class="level-up-card__subtitle" />
+                    </ui:Button>
+                    <ui:Button name="level-up-card-3" class="surface-card level-up-card">
+                        <ui:VisualElement class="level-up-card__top">
+                            <ui:VisualElement class="element-badge element-badge--md"><ui:VisualElement class="element-badge__icon el-icon" /></ui:VisualElement>
+                            <ui:VisualElement class="level-up-card__text">
+                                <ui:Label name="level-up-card-3-text" text="Rebuild" class="t-body-lg level-up-card__name" />
+                                <ui:Label name="level-up-card-3-levels" text="Lv 1 → 2" class="t-caption t-num level-up-card__levels" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Label name="level-up-card-3-subtitle" class="level-up-card__subtitle" />
+                    </ui:Button>
+                    <ui:Button name="level-up-card-4" class="surface-card level-up-card">
+                        <ui:VisualElement class="level-up-card__top">
+                            <ui:VisualElement class="element-badge element-badge--md"><ui:VisualElement class="element-badge__icon el-icon" /></ui:VisualElement>
+                            <ui:VisualElement class="level-up-card__text">
+                                <ui:Label name="level-up-card-4-text" text="Move" class="t-body-lg level-up-card__name" />
+                                <ui:Label name="level-up-card-4-levels" text="Lv 1 → 2" class="t-caption t-num level-up-card__levels" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Label name="level-up-card-4-subtitle" class="level-up-card__subtitle" />
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="level-up-featured" class="level-up-featured" />
+            </ui:VisualElement>
+            <ui:Label name="victory-banner" text="VICTORY!" class="t-display victory-banner" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:Instance template="Dashboard" name="dashboard-host" class="dashboard-host dashboard-host--overlay" />
+
+        <ui:VisualElement name="soft-reminder-panel" class="overlay-backdrop soft-reminder-panel">
+            <ui:VisualElement class="modal shadow-soft reminder-card">
+                <ui:VisualElement class="modal__corner modal__corner--tl" picking-mode="Ignore" />
+                <ui:VisualElement class="modal__corner modal__corner--tr" picking-mode="Ignore" />
+                <ui:VisualElement class="modal__corner modal__corner--br" picking-mode="Ignore" />
+                <ui:VisualElement class="modal__corner modal__corner--bl" picking-mode="Ignore" />
+                <ui:VisualElement class="icon icon--xl icon--moon reminder-icon" />
+                <ui:Label text="Your monster held on today" class="t-h2 reminder-title" />
+                <ui:Label text="That's okay! Every habit counts. Want to adjust your tasks for tomorrow?" class="t-body reminder-body" />
+                <ui:Label name="reminder-damage" text="" class="t-caption t-num reminder-damage" />
+                <ui:VisualElement class="modal__footer reminder-buttons">
+                    <ui:Button name="adjust-habits-button" text="Adjust Habits" class="btn btn--secondary" />
+                    <ui:Button name="continue-button" text="Continue" class="btn btn--primary" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,322 @@
+
+.hud-root {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.nameplate {
+    margin: 20px 24px 0 24px;
+    padding: 20px 24px;
+    flex-shrink: 0;
+}
+
+.nameplate__row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.nameplate__name {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nameplate__chip {
+    margin-left: 16px;
+}
+
+.nameplate__chip-weak {
+    margin-right: 10px;
+}
+
+.nameplate__hp {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nameplate__heart {
+    margin-right: 16px;
+    -unity-background-image-tint-color: var(--c-hp);
+}
+
+.hp-label {
+    min-width: 180px;
+    margin-left: 16px;
+    -unity-text-align: middle-right;
+    color: var(--c-text);
+}
+
+.nameplate--defeated {
+    opacity: 0.6;
+}
+
+.monster-anchor {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 0;
+    height: 0;
+}
+
+.hud-spacer {
+    flex-grow: 1;
+}
+
+.attack-sheet {
+    flex-shrink: 0;
+    padding: 18px 24px 24px 24px;
+}
+
+.attack-fade-edge {
+    -unity-background-image-tint-color: var(--c-surface-1);
+}
+
+.toast-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 120px;
+    align-items: center;
+}
+
+.attack-header {
+    margin: 0 0 12px 8px;
+    font-size: 28px;
+}
+
+.attack-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.attack-slot {
+    width: 49%;
+    min-height: 124px;
+    margin: 0 0 12px 0;
+    padding: 12px 16px 12px 14px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.attack-slot:hover:enabled {
+    background-color: var(--c-raised);
+}
+
+.attack-slot:active {
+    translate: 0 4px;
+    border-bottom-width: 4px;
+    padding-bottom: 16px;
+}
+
+.attack-slot__badge {
+    width: 76px;
+    height: 76px;
+}
+
+.attack-slot__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 14px;
+}
+
+.attack-slot__meta {
+    flex-direction: row;
+    align-items: center;
+}
+
+.attack-slot__element {
+    -unity-text-align: middle-left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 28px;
+    color: var(--el-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.attack-slot__level,
+.attack-slot__count {
+    height: 40px;
+    padding: 0 12px;
+    margin-left: 6px;
+    border-radius: 14px;
+    font-size: 28px;
+    -unity-text-align: middle-center;
+}
+
+.attack-slot__name {
+    max-height: 92px;
+    margin: 4px 0 0 0;
+    padding: 0;
+    font-size: 38px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text);
+    -unity-text-align: upper-left;
+}
+
+.attack-slot--weakness {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.slot--featured {
+    border-width: 4px 4px 10px 4px;
+    border-color: var(--c-gold) var(--c-gold) var(--c-gold-lip) var(--c-gold);
+    background-color: var(--c-surface-3);
+}
+
+.slot--featured .attack-slot__element {
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: visible;
+    text-overflow: clip;
+    letter-spacing: 0;
+}
+
+.attack-slot__ribbon {
+    -unity-text-align: middle-left;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 28px;
+    color: var(--c-gold-hi);
+    white-space: nowrap;
+}
+
+.attack-slot--disabled,
+.attack-slot--disabled:hover {
+    background-color: var(--c-surface-1);
+    border-bottom-width: 2px;
+    border-color: var(--c-stroke-soft);
+    opacity: 1;
+}
+
+.attack-slot--disabled .attack-slot__name {
+    color: var(--c-text-2);
+}
+
+.attack-slot--disabled .element-badge {
+    background-color: var(--c-surface-1);
+    border-radius: 50%;
+    border-width: 3px;
+    border-color: var(--c-success);
+    filter: none;
+}
+
+.attack-slot--disabled .element-badge__icon {
+    width: 64%;
+    height: 64%;
+    background-image: url("project://database/Assets/_Project/UI/Icons/ui_check.svg");
+    -unity-background-image-tint-color: var(--c-success);
+}
+
+.attack-slot--disabled .attack-slot__count,
+.attack-slot--disabled .attack-slot__level {
+    display: none;
+}
+
+.callout {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    -unity-text-align: middle-center;
+    font-size: 100px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    color: var(--c-gold-hi);
+    -unity-text-outline-width: 8px;
+    -unity-text-outline-color: var(--c-stroke-dark);
+    text-shadow: 0 8px 0 var(--c-text-shadow);
+    rotate: -6deg;
+}
+
+.dmg-number {
+    position: absolute;
+    width: 400px;
+    margin-left: -200px;
+    -unity-text-align: middle-center;
+    font-size: 72px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    color: var(--c-text);
+    -unity-text-outline-width: 6px;
+    -unity-text-outline-color: var(--c-stroke-dark);
+}
+
+.dmg-number--weak {
+    font-size: 96px;
+    color: var(--c-gold-hi);
+}
+
+.completion-orb {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    filter: drop-shadow(0 0 12px var(--el-glow));
+}
+
+.slot-flash {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    background-color: var(--c-flash);
+    opacity: 0;
+}
+
+.is-short .attack-header {
+    display: none;
+}
+
+.is-short .nameplate {
+    margin-top: 16px;
+    padding: 16px 24px;
+}
+
+.is-short .nameplate__hp {
+    margin-top: 12px;
+}
+
+.is-short .attack-sheet {
+    padding: 14px 20px 16px 20px;
+}
+
+.is-short .attack-slot {
+    min-height: 100px;
+    padding: 8px 14px 8px 12px;
+    margin-bottom: 10px;
+}
+
+.is-short .attack-slot--weakness {
+    margin-bottom: 0;
+}
+
+.is-short .attack-slot__badge {
+    width: 60px;
+    height: 60px;
+}
+
+.is-short .attack-slot__name {
+    max-height: 48px;
+    white-space: nowrap;
+}
+
+.scene-scrim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--c-bg-abyss);
+}

@@ -1,0 +1,296 @@
+
+.tut-root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Regular SDF.asset");
+    color: var(--c-text);
+    display: none;
+}
+
+.tut-dim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--c-scrim);
+}
+
+.tut-blocker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--c-clear);
+}
+
+.tut-ring {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-color: var(--c-gold-hi);
+    border-radius: 28px;
+    display: none;
+}
+
+.tut-safe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tut-dialogue {
+    position: absolute;
+    left: 32px;
+    right: 32px;
+    top: 0;
+    padding: 32px 40px 36px 40px;
+    background-color: var(--c-surface-2);
+    border-color: var(--c-gold-a) var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-dark);
+}
+
+.tut-dialogue__header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tut-dialogue__heading {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 24px;
+}
+
+.tut-name {
+    font-size: 32px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    letter-spacing: 1px;
+    color: var(--c-gold-hi);
+}
+
+.tut-skip,
+.tut-skip:focus,
+.tut-skip:hover {
+    align-self: flex-start;
+    margin: 0;
+    padding: 8px 4px;
+    background-color: var(--c-clear);
+    border-width: 0;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text-2);
+}
+
+.tut-skip:active {
+    color: var(--c-text);
+}
+
+.tut-lines {
+    margin-bottom: 8px;
+}
+
+.tut-line {
+    font-size: 38px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Regular SDF.asset");
+    color: var(--c-text);
+    white-space: normal;
+    margin-bottom: 14px;
+}
+
+.tut-line--lead {
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+}
+
+.tut-footnote {
+    font-size: 28px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text-3);
+    white-space: normal;
+    margin-top: 4px;
+    display: none;
+}
+
+.tut-elements {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 8px 0 12px 0;
+    display: none;
+}
+
+.tut-element {
+    width: 96px;
+    height: 96px;
+}
+
+.tut-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.tut-button {
+    min-height: 104px;
+    padding: 0 36px;
+    margin-left: 16px;
+}
+
+.tut-button__label {
+    font-size: 38px;
+}
+
+.tut-dialogue--compact {
+    padding: 16px 28px 20px 28px;
+}
+
+.tut-dialogue--compact .tut-avatar,
+.tut-dialogue--compact .tut-dialogue__heading,
+.tut-dialogue--compact .tut-elements,
+.tut-dialogue--compact .tut-footnote {
+    display: none;
+}
+
+.tut-dialogue--compact .tut-dialogue__header {
+    margin-bottom: 0;
+    justify-content: flex-end;
+}
+
+.tut-dialogue--compact .tut-lines {
+    margin-bottom: 0;
+}
+
+.tut-dialogue--compact .tut-line {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.tut-dialogue--compact .tut-buttons {
+    margin-top: 8px;
+}
+
+.tut-dialogue--compact .tut-button {
+    min-height: 88px;
+}
+
+.tut-arrow {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 56px;
+    rotate: 45deg;
+    background-color: var(--c-surface-2);
+    display: none;
+}
+
+.tut-arrow--up {
+    top: -22px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    border-color: var(--c-gold-a);
+}
+
+.tut-arrow--down {
+    bottom: -22px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-color: var(--c-stroke-dark);
+}
+
+.tut-avatar {
+    width: 148px;
+    height: 148px;
+    flex-shrink: 0;
+}
+
+.tut-avatar__body {
+    width: 148px;
+    height: 148px;
+    border-radius: 74px;
+    border-width: 4px;
+    border-color: var(--c-gold-hi);
+    background-color: var(--el);
+}
+
+.tut-avatar__body--portrait {
+    background-color: var(--c-clear);
+    border-width: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.tut-avatar__face {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    right: 14px;
+    bottom: 14px;
+    -unity-background-scale-mode: scale-to-fit;
+    scale: 1 -1;
+}
+
+.tut-prompt {
+    position: absolute;
+    left: 64px;
+    right: 64px;
+    top: 36%;
+    padding: 40px;
+    background-color: var(--c-surface-2);
+    border-color: var(--c-gold-a) var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-dark);
+    display: none;
+}
+
+.tut-prompt__text {
+    margin-top: 16px;
+}
+
+.is-short .tut-dialogue {
+    padding: 24px 32px 28px 32px;
+}
+
+.is-short .tut-avatar,
+.is-short .tut-avatar__body {
+    width: 112px;
+    height: 112px;
+}
+
+.is-short .tut-avatar__body {
+    border-radius: 56px;
+}
+
+.is-short .tut-line {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.is-short .tut-button {
+    min-height: 96px;
+}
+
+.tut-help-button,
+.tut-help-button:focus {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    width: 112px;
+    height: 112px;
+    min-height: 112px;
+    padding: 0;
+    border-radius: 28px;
+}
+
+.tut-help-button__label {
+    font-size: 64px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    color: var(--c-gold-hi);
+    -unity-text-align: middle-center;
+    margin: 0;
+    padding: 0;
+}

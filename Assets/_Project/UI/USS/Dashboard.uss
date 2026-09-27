@@ -1,0 +1,397 @@
+
+.dashboard-host {
+    flex-grow: 1;
+    display: none;
+}
+
+.dashboard-host--overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dashboard-panel {
+    flex-grow: 1;
+    background-color: var(--c-bg-deep);
+}
+
+.dash-top {
+    padding: 48px 32px 0 32px;
+    flex-shrink: 0;
+}
+
+.dash-header {
+    flex-direction: row;
+    align-items: center;
+}
+
+.dash-header__icon {
+    margin-right: 24px;
+    -unity-background-image-tint-color: var(--c-gold-hi);
+}
+
+.dash-header__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.dash-gold-icon {
+    -unity-background-image-tint-color: var(--c-gold-hi);
+}
+
+.dash-recap {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+    padding: 20px 28px;
+    border-color: var(--el) var(--c-stroke-dark) var(--el-deep) var(--c-stroke-dark);
+    display: none;
+}
+
+.dash-recap__text {
+    margin-left: 24px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.dash-recap__line {
+    white-space: normal;
+}
+
+.dash-list-wrap {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 16px;
+}
+
+.dash-scroll {
+    flex-grow: 1;
+}
+
+.dash-scroll .unity-scroll-view__content-container {
+    padding: 16px 32px 48px 32px;
+}
+
+.dash-mask {
+    -unity-background-image-tint-color: var(--c-bg-deep);
+}
+
+.dash-card {
+    padding: 28px 32px 32px 32px;
+    margin-bottom: 28px;
+}
+
+.dash-section {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--c-stroke-soft);
+}
+
+.dash-section__name {
+    color: var(--c-gold-hi);
+}
+
+.dash-empty {
+    align-items: center;
+    padding: 56px 40px;
+}
+
+.dash-empty__icon {
+    -unity-background-image-tint-color: var(--c-text-3);
+    margin-bottom: 24px;
+}
+
+.dash-empty__title,
+.dash-empty__body {
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.dash-empty__body {
+    margin-top: 12px;
+    color: var(--c-text-2);
+}
+
+.dash-streak {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-streak__main {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.dash-streak__count {
+    font-size: 132px;
+    color: var(--c-gold-hi);
+    -unity-text-outline-width: 5px;
+    -unity-text-outline-color: var(--c-stroke-dark);
+    text-shadow: 0 6px 0 var(--c-text-shadow);
+    margin-right: 24px;
+    min-width: 96px;
+    -unity-text-align: middle-center;
+}
+
+.dash-streak__label {
+    color: var(--c-gold);
+}
+
+.dash-dots {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.dash-dot {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: var(--c-text-3);
+    background-color: var(--c-clear);
+    flex-shrink: 0;
+}
+
+.dash-dot--defeated {
+    background-color: var(--el);
+    border-color: var(--el);
+}
+
+.dash-dot--partial {
+    border-color: var(--el);
+    background-color: var(--el-glow);
+}
+
+.dash-dot--missed {
+    border-color: var(--c-surface-1);
+    background-color: var(--c-abyss-a);
+}
+
+.dash-dot--today {
+    border-color: var(--c-gold-hi);
+}
+
+.dash-dot--legend {
+    width: 32px;
+    height: 32px;
+    border-width: 4px;
+    margin-right: 10px;
+}
+
+.dash-dot--legend.dash-dot--defeated {
+    background-color: var(--c-success);
+    border-color: var(--c-success);
+}
+
+.dash-dot--legend.dash-dot--partial {
+    border-color: var(--c-success);
+    background-color: var(--c-clear);
+}
+
+.dash-legend {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.dash-legend__item {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.dash-tiles {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dash-tile {
+    width: 32%;
+    padding: 16px 8px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    background-color: var(--c-abyss-a);
+    align-items: center;
+}
+
+.dash-tile--wide {
+    width: 49%;
+}
+
+.dash-tile__value {
+    font-size: 56px;
+    color: var(--c-text);
+    -unity-text-align: middle-center;
+}
+
+.dash-tile .t-caption {
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.dash-chart-title {
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.dash-chart {
+    flex-direction: row;
+    height: 300px;
+    align-items: stretch;
+}
+
+.dash-bar {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 8px;
+    align-items: center;
+}
+
+.dash-bar__head {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.dash-bar__value {
+    font-size: 28px;
+    color: var(--c-text-2);
+    -unity-text-align: middle-center;
+}
+
+.dash-bar__track {
+    flex-grow: 1;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.dash-bar__fill {
+    min-height: 8px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: var(--el);
+    border-top-width: 4px;
+    border-color: var(--c-shine);
+    transform-origin: bottom;
+}
+
+.dash-bar--missed .dash-bar__fill {
+    background-color: var(--c-surface-1);
+    border-top-width: 0;
+}
+
+.dash-bar__day {
+    font-size: 28px;
+    color: var(--c-text-3);
+    margin-top: 8px;
+    height: 40px;
+    -unity-text-align: middle-center;
+}
+
+.dash-bar--today .dash-bar__day {
+    color: var(--c-gold-hi);
+}
+
+.dash-bar__win {
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+    -unity-background-image-tint-color: var(--c-success);
+}
+
+.dash-element-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.dash-element-row__body {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 20px;
+}
+
+.dash-element-row__top {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.dash-element-row__name {
+    font-size: 38px;
+    color: var(--c-text);
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-SemiBold SDF.asset");
+    flex-shrink: 1;
+}
+
+.dash-element-row__level {
+    margin-left: 12px;
+    color: var(--el-text);
+}
+
+.dash-element-row__tag {
+    height: 44px;
+    margin-left: 12px;
+    padding: 0 14px;
+}
+
+.dash-element-row__tag .chip__label {
+    font-size: 28px;
+}
+
+.dash-element-row__count {
+    flex-grow: 1;
+    -unity-text-align: middle-right;
+    font-size: 44px;
+    color: var(--c-text);
+}
+
+.dash-element-row__bar {
+    height: 32px;
+}
+
+.dash-element-row__bar .bar__fill {
+    background-color: var(--el);
+}
+
+.dash-element-row__detail {
+    margin-top: 6px;
+}
+
+.dash-footer {
+    flex-direction: row;
+    flex-shrink: 0;
+    padding: 24px 32px 32px 32px;
+}
+
+.dash-footer__close {
+    flex-grow: 1;
+}
+
+.is-short .dash-top {
+    padding-top: 24px;
+}
+
+.is-short .dash-streak__count {
+    font-size: 104px;
+}
+
+.is-short .dash-chart {
+    height: 220px;
+}
+
+.is-short .dash-dot {
+    width: 44px;
+    height: 44px;
+}

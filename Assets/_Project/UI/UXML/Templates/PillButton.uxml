@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <ui:Button name="pill-button" text="Button" class="btn btn--secondary" />
+</ui:UXML>

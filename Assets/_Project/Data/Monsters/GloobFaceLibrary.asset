@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bd5dbb43e15b941b4ca0f656cff10e, type: 3}
+  m_Name: GloobFaceLibrary
+  m_EditorClassIdentifier: Spaa.Runtime::Spaa.Battle.MonsterFaceLibrary
+  elementFaces:
+  - eye: {fileID: 2800000, guid: 2aad8e61e2f14274cb458ef105707367, type: 3}
+    mouth: {fileID: 2800000, guid: a3f2b7a8836041942abcc79e054862a7, type: 3}
+  - eye: {fileID: 2800000, guid: ef37d99d75cc602409c1a5054d559ea5, type: 3}
+    mouth: {fileID: 2800000, guid: abd57ed9fc3b41748be742b9ead98fbb, type: 3}
+  - eye: {fileID: 2800000, guid: ae3d43b53cb749141a866bc75c8e7031, type: 3}
+    mouth: {fileID: 2800000, guid: 5c1ea187d200c4c4c956dfd147addf53, type: 3}
+  - eye: {fileID: 2800000, guid: 84e8a0b8a0f6c8e44aa76ea472629bf5, type: 3}
+    mouth: {fileID: 2800000, guid: 5fcd5b0be288d5c4eb7f685922bb49a1, type: 3}
+  - eye: {fileID: 2800000, guid: d24e43d3d0ed63b46b788defe0e7ca0e, type: 3}
+    mouth: {fileID: 2800000, guid: d77ef87570f85ef4980758c50acd0f2f, type: 3}
+  hurtFace:
+    eye: {fileID: 2800000, guid: a439db377e66be14a89d4925dc8fe7a3, type: 3}
+    mouth: {fileID: 2800000, guid: 3e66c3d8947df5343af53e2cabdb57f8, type: 3}
+  lowHpFace:
+    eye: {fileID: 2800000, guid: 04381f2b0a6fa5a4695407bbb23d8617, type: 3}
+    mouth: {fileID: 0}
+  defeatedFace:
+    eye: {fileID: 2800000, guid: 3b7c59156e0cc2246b184b775187f19c, type: 3}
+    mouth: {fileID: 2800000, guid: ec7b36b4301318a44b0f34401b4a43a4, type: 3}
+  faceColor: {r: 0.11, g: 0.12, b: 0.23, a: 1}
+  lowHpFraction: 0.3

@@ -1,0 +1,177 @@
+
+.overlay-backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--c-scrim);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.level-up-panel {
+    padding: 0 32px;
+}
+
+.level-up-content {
+    width: 100%;
+    max-width: 1016px;
+    align-items: stretch;
+}
+
+.level-up-title {
+    font-size: 104px;
+    margin-bottom: 4px;
+}
+
+.level-up-subtitle {
+    -unity-text-align: middle-center;
+    color: var(--c-text-2);
+    margin-bottom: 32px;
+}
+
+.level-up-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.level-up-card {
+    width: 49%;
+    min-height: 176px;
+    margin: 0 0 16px 0;
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.level-up-card:hover {
+    background-color: var(--c-raised);
+}
+
+.level-up-card:active {
+    translate: 0 4px;
+    border-bottom-width: 4px;
+    padding-bottom: 24px;
+}
+
+.level-up-card__top {
+    flex-direction: row;
+    align-items: center;
+}
+
+.level-up-card__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 20px;
+}
+
+.level-up-card__name {
+    -unity-text-align: middle-left;
+    color: var(--el-text);
+    white-space: nowrap;
+}
+
+.level-up-card__levels {
+    -unity-text-align: middle-left;
+    color: var(--c-text);
+    margin-top: 4px;
+}
+
+.level-up-card__subtitle {
+    -unity-text-align: middle-left;
+    margin-top: 12px;
+    font-size: 28px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text-2);
+}
+
+.level-up-featured {
+    width: 100%;
+}
+
+.level-up-featured > .level-up-card {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.level-up-card--recommended {
+    border-width: 4px 4px 10px 4px;
+    border-color: var(--c-gold) var(--c-gold) var(--c-gold-lip) var(--c-gold);
+}
+
+.level-up-card--recommended .level-up-card__subtitle {
+    color: var(--c-gold-hi);
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-ExtraBold SDF.asset");
+}
+
+.victory-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 38%;
+    font-size: 160px;
+    -unity-text-outline-width: 10px;
+    display: none;
+}
+
+.soft-reminder-panel {
+    padding: 0 32px;
+}
+
+.reminder-card {
+    align-items: center;
+}
+
+.reminder-icon {
+    -unity-background-image-tint-color: var(--el-rest);
+    margin-bottom: 24px;
+}
+
+.reminder-title {
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.reminder-body {
+    -unity-text-align: middle-center;
+    white-space: normal;
+    margin-top: 16px;
+    color: var(--c-text-2);
+}
+
+.reminder-damage {
+    margin-top: 20px;
+    color: var(--c-hp);
+    display: none;
+}
+
+.reminder-buttons {
+    width: 100%;
+}
+
+.reminder-buttons > .btn--primary {
+    margin-left: 16px;
+}
+
+.is-short .level-up-title {
+    font-size: 80px;
+}
+
+.is-short .level-up-subtitle {
+    margin-bottom: 16px;
+}
+
+.is-short .level-up-card {
+    min-height: 136px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+}
+
+.is-short .level-up-card .element-badge {
+    width: 72px;
+    height: 72px;
+}

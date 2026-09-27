@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67df1e5d8cd2ec43b266a0b1ab9aac1, type: 3}
+  m_Name: AudioConfig
+  m_EditorClassIdentifier: Spaa.Runtime::Spaa.Audio.AudioConfigSO
+  menuMusic: {fileID: 8300000, guid: 3da93957e180d1d48927be94346ecbbf, type: 3}
+  battleMusic: {fileID: 8300000, guid: 84ae7cc016c3e684e99179e1f2b8a81f, type: 3}
+  musicVolume: 0.5
+  musicFadeIn: 1
+  attackClips:
+  - {fileID: 8300000, guid: 7e2a5ba2acae79546b1fd1c6d5f34e57, type: 3}
+  - {fileID: 8300000, guid: f435535698fd77844b72cb6c5074aa65, type: 3}
+  - {fileID: 8300000, guid: ec37c2ad3fa100f4bbbcf20f11356a1f, type: 3}
+  levelUp: {fileID: 8300000, guid: 1335cddc0357b8849baf272df663e552, type: 3}
+  popup: {fileID: 8300000, guid: df8c7c839d7ca35468d9c259180ca2c9, type: 3}
+  uiSelect: {fileID: 8300000, guid: 780e114aa92d21b4a8275810881aaa48, type: 3}
+  sfxVolume: 0.9

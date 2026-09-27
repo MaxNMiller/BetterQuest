@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/DebugPanel.uss" />
+    <ui:VisualElement name="debug-tap-zone" class="debug-tap-zone" />
+    <ui:VisualElement name="debug-panel" class="debug-panel">
+        <ui:Label text="Debug Panel (F1 / triple-tap)" class="debug-title" />
+        <ui:VisualElement class="debug-row">
+            <ui:Button name="debug-force-end-of-day-button" text="Force End of Day" class="btn btn--secondary btn--sm debug-button" />
+            <ui:Button name="debug-advance-day-button" text="Advance Day" class="btn btn--secondary btn--sm debug-button" />
+            <ui:Button name="debug-kill-monster-button" text="Kill Monster" class="btn btn--secondary btn--sm debug-button" />
+            <ui:Button name="debug-reset-save-button" text="Reset Save" class="btn btn--secondary btn--sm debug-button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="debug-row">
+            <ui:Button name="debug-seed-history-button" text="Seed Demo History" class="btn btn--secondary btn--sm debug-button" />
+            <ui:Button name="debug-clear-history-button" text="Clear History" class="btn btn--secondary btn--sm debug-button" />
+            <ui:Button name="debug-reset-tutorial-button" text="Reset Tutorial" class="btn btn--secondary btn--sm debug-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="debug-take-damage-row" class="debug-toggle-row">
+            <ui:Toggle name="debug-take-damage-toggle" />
+            <ui:Label text="Take Damage" />
+        </ui:VisualElement>
+        <ui:VisualElement name="debug-levelup-section">
+            <ui:Label text="Level Up:" class="debug-title" />
+            <ui:VisualElement class="debug-row">
+                <ui:Button name="debug-levelup-0-button" text="Rest" class="btn btn--secondary btn--sm debug-button" />
+                <ui:Button name="debug-levelup-1-button" text="SelfCare" class="btn btn--secondary btn--sm debug-button" />
+                <ui:Button name="debug-levelup-2-button" text="Food" class="btn btn--secondary btn--sm debug-button" />
+                <ui:Button name="debug-levelup-3-button" text="Rebuild" class="btn btn--secondary btn--sm debug-button" />
+                <ui:Button name="debug-levelup-4-button" text="Move" class="btn btn--secondary btn--sm debug-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

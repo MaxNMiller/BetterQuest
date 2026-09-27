@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239db71d36e3af34cbd897215caefc91, type: 3}
+  m_Name: TutorialConfig
+  m_EditorClassIdentifier: Spaa.Runtime::Spaa.Tutorial.TutorialConfigSO
+  enabled: 1
+  version: 1
+  replayOnVersionBump: 0
+  script: {fileID: 11400000, guid: 3b9afc5b8d6f01c4a9dd709e48732921, type: 2}
+  guideName: Wombino the Wise
+  learnMoreUrl: https://www.metabolicmind.org/thinksmart/
+  faceLibrary: {fileID: 11400000, guid: d69a871fbb1247241adb4653233e329b, type: 2}
+  portrait: {fileID: 2800000, guid: 8cfc1325e69ac294989d282f4c410a4c, type: 3}
+  motionSettings: {fileID: 11400000, guid: 30348838d3bdfd24982d83a38870ac0d, type: 2}
+  spotlightPadding: 16
+  dialogueGap: 24
+  typewriterCharsPerSecond: 45

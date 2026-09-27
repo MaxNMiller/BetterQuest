@@ -1,0 +1,609 @@
+
+.surface-panel {
+    background-color: var(--c-surface-2-a);
+    border-width: 2px;
+    border-color: var(--c-stroke-soft) var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-dark);
+    border-radius: 28px;
+}
+
+.surface-card {
+    background-color: var(--c-surface-3);
+    border-width: 2px 2px 8px 2px;
+    border-color: var(--c-raised-hi-a) var(--c-stroke-dark) var(--c-lip) var(--c-stroke-dark);
+    border-radius: 28px;
+}
+
+.surface-sheet {
+    background-color: var(--c-surface-1-a);
+    border-top-width: 3px;
+    border-top-color: var(--c-gold-a);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.surface-inset {
+    background-color: var(--c-abyss-a);
+    border-width: 3px 2px 1px 2px;
+    border-color: var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-soft) var(--c-stroke-dark);
+}
+
+.fade-edge {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 96px;
+    background-image: url("project://database/Assets/_Project/UI/Textures/T_FadeEdge.png");
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.fade-edge--above {
+    bottom: 100%;
+}
+
+.fade-edge--top-mask {
+    top: 0;
+    height: 48px;
+    rotate: 180deg;
+}
+
+.fade-edge--bottom-mask {
+    bottom: 0;
+    height: 48px;
+}
+
+.vignette {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("project://database/Assets/_Project/UI/Textures/T_Vignette.png");
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.icon {
+    flex-shrink: 0;
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: var(--c-text);
+}
+
+.icon--xs { width: 40px; height: 40px; }
+.icon--sm { width: 56px; height: 56px; }
+.icon--md { width: 72px; height: 72px; }
+.icon--lg { width: 96px; height: 96px; }
+.icon--xl { width: 160px; height: 160px; }
+
+.icon--sword { background-image: url("project://database/Assets/_Project/UI/Icons/ui_sword.svg"); }
+.icon--book { background-image: url("project://database/Assets/_Project/UI/Icons/ui_book.svg"); }
+.icon--plus { background-image: url("project://database/Assets/_Project/UI/Icons/ui_plus.svg"); }
+.icon--minus { background-image: url("project://database/Assets/_Project/UI/Icons/ui_minus.svg"); }
+.icon--close { background-image: url("project://database/Assets/_Project/UI/Icons/ui_close.svg"); }
+.icon--check { background-image: url("project://database/Assets/_Project/UI/Icons/ui_check.svg"); }
+.icon--chevron { background-image: url("project://database/Assets/_Project/UI/Icons/ui_chevron.svg"); }
+.icon--back { background-image: url("project://database/Assets/_Project/UI/Icons/ui_back.svg"); }
+.icon--edit { background-image: url("project://database/Assets/_Project/UI/Icons/ui_edit.svg"); }
+.icon--trash { background-image: url("project://database/Assets/_Project/UI/Icons/ui_trash.svg"); }
+.icon--warning { background-image: url("project://database/Assets/_Project/UI/Icons/ui_warning.svg"); }
+.icon--heart { background-image: url("project://database/Assets/_Project/UI/Icons/ui_heart.svg"); }
+.icon--moon { background-image: url("project://database/Assets/_Project/UI/Icons/ui_moon.svg"); }
+.icon--star { background-image: url("project://database/Assets/_Project/UI/Icons/ui_star.svg"); }
+.icon--rune { background-image: url("project://database/Assets/_Project/UI/Icons/ui_question_rune.svg"); }
+
+.el--rest .el-icon, .el-icon.el--rest { background-image: url("project://database/Assets/_Project/UI/Icons/RestLogo.png"); }
+.el--selfcare .el-icon, .el-icon.el--selfcare { background-image: url("project://database/Assets/_Project/UI/Icons/SelfCareLogo.png"); }
+.el--food .el-icon, .el-icon.el--food { background-image: url("project://database/Assets/_Project/UI/Icons/NutritionLogo.png"); }
+.el--rebuild .el-icon, .el-icon.el--rebuild { background-image: url("project://database/Assets/_Project/UI/Icons/RebuildLogo.png"); }
+.el--move .el-icon, .el-icon.el--move { background-image: url("project://database/Assets/_Project/UI/Icons/MoveLogo.png"); }
+
+.el-icon {
+    -unity-background-scale-mode: scale-to-fit;
+    flex-shrink: 0;
+}
+
+.btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    margin: 0;
+    padding: 0 48px;
+    border-radius: 28px;
+    border-width: 2px 2px 10px 2px;
+    font-size: 46px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    letter-spacing: 1px;
+    white-space: nowrap;
+    -unity-text-align: middle-center;
+    opacity: 1;
+    background-color: var(--c-raised);
+    border-color: var(--c-raised-hi) var(--c-stroke-dark) var(--c-lip) var(--c-stroke-dark);
+    color: var(--c-text);
+}
+
+.btn:active {
+    translate: 0 6px;
+    border-bottom-width: 4px;
+    padding-bottom: 6px;
+}
+
+.btn:disabled {
+    opacity: 1;
+    background-color: var(--c-surface-3);
+    border-color: var(--c-surface-3) var(--c-stroke-dark) var(--c-lip) var(--c-stroke-dark);
+    color: var(--c-text-3);
+}
+
+.btn:disabled .icon {
+    opacity: 0.5;
+    -unity-background-image-tint-color: var(--c-text-3);
+}
+
+.btn__label {
+    font-size: 46px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    color: var(--c-text);
+    -unity-text-align: middle-center;
+}
+
+.btn .icon {
+    margin-right: 20px;
+}
+
+.btn:disabled .btn__label {
+    color: var(--c-text-3);
+}
+
+.btn--secondary,
+.btn--secondary:focus {
+    background-color: var(--c-raised);
+    border-color: var(--c-raised-hi) var(--c-stroke-dark) var(--c-lip) var(--c-stroke-dark);
+    color: var(--c-text);
+}
+
+.btn--secondary:hover:enabled {
+    background-color: var(--c-raised-hi);
+}
+
+.btn--primary,
+.btn--primary:focus {
+    background-color: var(--c-gold);
+    border-color: var(--c-gold-hi) var(--c-gold-lip) var(--c-gold-lip) var(--c-gold-lip);
+    color: var(--c-text-on-gold);
+}
+
+.btn--primary:hover:enabled {
+    background-color: var(--c-gold-hi);
+}
+
+.btn--primary .btn__label { color: var(--c-text-on-gold); }
+.btn--primary .icon { -unity-background-image-tint-color: var(--c-text-on-gold); }
+
+.btn--ghost,
+.btn--ghost:focus,
+.btn--ghost:hover {
+    background-color: var(--c-clear);
+    border-width: 0;
+    color: var(--c-text-2);
+}
+
+.btn--ghost .btn__label { color: var(--c-text-2); }
+
+.btn--danger,
+.btn--danger:focus {
+    background-color: var(--c-danger);
+    border-color: var(--c-danger-hi) var(--c-danger-lip) var(--c-danger-lip) var(--c-danger-lip);
+    color: var(--c-text-on-danger);
+}
+
+.btn--danger .btn__label { color: var(--c-text-on-danger); }
+.btn--danger .icon { -unity-background-image-tint-color: var(--c-text-on-danger); }
+
+.btn--danger-ghost,
+.btn--danger-ghost:focus,
+.btn--danger-ghost:hover {
+    background-color: var(--c-clear);
+    border-width: 2px;
+    border-color: var(--c-danger-a);
+    color: var(--c-danger);
+}
+
+.btn--danger-ghost:active {
+    translate: 0 2px;
+    border-bottom-width: 2px;
+    padding-bottom: 0;
+}
+
+.btn--danger-ghost .btn__label { color: var(--c-danger); }
+.btn--danger-ghost .icon { -unity-background-image-tint-color: var(--c-danger); }
+
+.btn--icon,
+.btn--icon:focus {
+    width: 120px;
+    height: 120px;
+    min-height: 120px;
+    padding: 0;
+    border-radius: 20px;
+    border-width: 2px 2px 8px 2px;
+    background-color: var(--c-raised);
+    border-color: var(--c-raised-hi) var(--c-stroke-dark) var(--c-lip) var(--c-stroke-dark);
+}
+
+.btn--icon .icon {
+    margin: 0;
+}
+
+.btn--icon:active {
+    border-bottom-width: 3px;
+    padding-bottom: 5px;
+}
+
+.btn--sm {
+    min-height: 96px;
+    padding: 0 28px;
+    font-size: 32px;
+}
+
+.field {
+    margin: 0;
+}
+
+.field > .unity-base-text-field__input {
+    min-height: 112px;
+    padding: 0 32px;
+    border-radius: 20px;
+    font-size: 38px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Regular SDF.asset");
+    color: var(--c-text);
+    background-color: var(--c-abyss-a);
+    border-width: 3px 2px 1px 2px;
+    border-color: var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-soft) var(--c-stroke-dark);
+    --unity-cursor-color: var(--c-gold);
+    --unity-selection-color: var(--c-gold-select);
+}
+
+.field:focus > .unity-base-text-field__input,
+.field > .unity-base-text-field__input:focus {
+    border-width: 3px;
+    border-color: var(--c-gold);
+}
+
+.field--invalid > .unity-base-text-field__input {
+    border-width: 3px;
+    border-color: var(--c-danger);
+}
+
+.field > .unity-base-text-field__input .unity-text-element--placeholder,
+.field .unity-text-element--placeholder {
+    color: var(--c-text-3);
+}
+
+.field__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 12px;
+}
+
+.field__counter {
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text-3);
+}
+
+.field__counter--warn {
+    color: var(--c-warning);
+}
+
+.element-badge {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    filter: drop-shadow(0 4px 0 var(--c-stroke-dark));
+}
+
+.element-badge__icon {
+    width: 100%;
+    height: 100%;
+}
+
+.element-badge--xs { width: 56px; height: 56px; }
+.element-badge--sm { width: 72px; height: 72px; }
+.element-badge--md { width: 96px; height: 96px; }
+.element-badge--lg { width: 160px; height: 160px; }
+
+.element-badge--box {
+    border-radius: 20px;
+    background-color: var(--el-deep);
+    border-width: 3px 3px 6px 3px;
+    border-color: var(--el) var(--el) var(--c-stroke-dark) var(--el);
+    filter: none;
+}
+
+.element-badge--box .element-badge__icon {
+    width: 64%;
+    height: 64%;
+}
+
+.bar {
+    flex-grow: 1;
+    height: 44px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--c-abyss-a);
+    border-width: 3px 2px 1px 2px;
+    border-color: var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-soft) var(--c-stroke-dark);
+}
+
+.bar__trail,
+.bar__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transform-origin: left;
+}
+
+.bar__trail {
+    background-color: var(--c-gold-hi);
+}
+
+.bar__fill {
+    background-color: var(--c-hp);
+}
+
+.bar__shine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 34%;
+    background-color: var(--c-shine);
+}
+
+.bar--low .bar__fill { background-color: var(--c-hp-low); }
+.bar--xp .bar__fill { background-color: var(--c-xp); }
+.bar--flash .bar__fill { background-color: var(--c-text); }
+
+.modal-scrim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--c-scrim);
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12% 32px 32px 32px;
+}
+
+.modal {
+    width: 100%;
+    max-width: 960px;
+    padding: 48px;
+    border-radius: 40px;
+    background-color: var(--c-surface-2);
+    border-width: 2px;
+    border-color: var(--c-stroke-soft) var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-dark);
+}
+
+.modal__header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    min-height: 120px;
+}
+
+.modal__title {
+    font-size: 52px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-SemiBold SDF.asset");
+    color: var(--c-text);
+    -unity-text-align: middle-center;
+}
+
+.modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal__footer {
+    flex-direction: row;
+    margin-top: 32px;
+}
+
+.modal__footer > .btn {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.modal__footer > .btn--primary {
+    flex-grow: 1.6;
+    margin-left: 16px;
+}
+
+.modal__corner {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url("project://database/Assets/_Project/UI/Icons/ui_rune_corner.svg");
+    -unity-background-image-tint-color: var(--c-rune);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.modal__corner--tl { left: 14px; top: 14px; }
+.modal__corner--tr { right: 14px; top: 14px; rotate: 90deg; }
+.modal__corner--br { right: 14px; bottom: 14px; rotate: 180deg; }
+.modal__corner--bl { left: 14px; bottom: 14px; rotate: 270deg; }
+
+.section-header {
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 0 12px 0;
+    margin-bottom: 16px;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--c-stroke-soft);
+}
+
+.section-header__name {
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: 32px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-ExtraBold SDF.asset");
+    letter-spacing: 2px;
+    color: var(--el-text);
+}
+
+.chip {
+    height: 56px;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-ExtraBold SDF.asset");
+    color: var(--c-text);
+    background-color: var(--c-abyss-chip);
+}
+
+.chip__label {
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-ExtraBold SDF.asset");
+    color: var(--c-text);
+    padding: 0;
+    margin: 0;
+}
+
+.chip__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.chip--count {
+    background-color: var(--c-abyss-chip);
+}
+
+.chip--weak {
+    background-color: var(--el);
+}
+
+.chip--weak .chip__label {
+    color: var(--c-stroke-dark);
+}
+
+.chip--weak .chip__icon {
+    border-radius: 50%;
+    border-width: 3px;
+    border-color: var(--c-stroke-dark);
+}
+
+
+.pips {
+    flex-direction: row;
+    align-items: center;
+}
+
+.pip {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    margin-right: 8px;
+    background-color: var(--c-surface-1);
+    border-width: 2px;
+    border-color: var(--c-stroke-soft);
+}
+
+.pip--on {
+    background-color: var(--el);
+    border-color: var(--el);
+}
+
+.banner--warning {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: 20px;
+    background-color: var(--c-warning-a);
+    border-left-width: 6px;
+    border-left-color: var(--c-warning);
+}
+
+.banner--warning .icon {
+    -unity-background-image-tint-color: var(--c-warning);
+    margin-right: 20px;
+}
+
+.banner__text {
+    flex-shrink: 1;
+    flex-grow: 1;
+    white-space: normal;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text);
+}
+
+.divider {
+    height: 2px;
+    background-color: var(--c-stroke-soft);
+    margin: 32px 0;
+}
+
+.toast {
+    padding: 16px 32px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    background-color: var(--c-surface-2-a);
+    border-width: 2px;
+    border-color: var(--c-stroke-soft) var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-dark);
+    font-size: 34px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-SemiBold SDF.asset");
+    color: var(--c-gold-hi);
+    opacity: 0;
+}
+
+.scroll .unity-scroller--horizontal {
+    display: none;
+}
+
+.scroll .unity-scroller--vertical {
+    width: 12px;
+    border-width: 0;
+    background-color: var(--c-clear);
+}
+
+.scroll .unity-scroller__low-button,
+.scroll .unity-scroller__high-button {
+    display: none;
+}
+
+.scroll .unity-scroller--vertical > .unity-scroller__slider {
+    margin: 0;
+    width: 12px;
+}
+
+.scroll .unity-base-slider__tracker {
+    background-color: var(--c-clear);
+    border-width: 0;
+}
+
+.scroll .unity-base-slider__dragger {
+    width: 8px;
+    left: 2px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: var(--c-gold-thumb);
+}
+
+.scroll .unity-base-slider__dragger-border {
+    display: none;
+}

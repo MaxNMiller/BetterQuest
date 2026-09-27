@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><clipPath id="c"><path d="M40 14 L76 14 L78 64 C92 68 106 72 112 80 C118 88 118 100 114 110 L34 110 C30 110 28 107 29 103 Z"/></clipPath></defs>
+  <path d="M40 14 L76 14 L78 64 C92 68 106 72 112 80 C118 88 118 100 114 110 L34 110 C30 110 28 107 29 103 Z" fill="#FFFFFF"/>
+  <g clip-path="url(#c)"><circle cx="118" cy="124" r="52" fill="#D9E2E8"/></g>
+  <path d="M40 14 L76 14 L78 64 C92 68 106 72 112 80 C118 88 118 100 114 110 L34 110 C30 110 28 107 29 103 Z" fill="none" stroke="#081620" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M31 96 L115 96" stroke="#081620" stroke-width="5"/><path d="M40 28 C26 18 10 20 6 28 C14 32 20 34 26 36 C14 38 8 44 8 50 C18 52 30 48 38 44 Z" fill="#FFFFFF" stroke="#081620" stroke-width="5" stroke-linejoin="round"/><path d="M84 28 L104 28 M88 42 L112 42" stroke="#081620" stroke-width="5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,53 @@
+.debug-tap-zone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.debug-panel {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    right: 16px;
+    padding: 24px;
+    border-radius: 28px;
+    background-color: var(--c-surface-2-a);
+    border-width: 2px;
+    border-color: var(--c-gold-a) var(--c-stroke-dark) var(--c-stroke-dark) var(--c-stroke-dark);
+    display: none;
+}
+
+.debug-button {
+    min-height: 88px;
+    font-size: 30px;
+    padding: 0 22px;
+    margin: 6px;
+    border-radius: 20px;
+    border-width: 2px 2px 6px 2px;
+}
+
+.debug-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.debug-title {
+    color: var(--c-gold-hi);
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-ExtraBold SDF.asset");
+    margin: 4px 6px 8px 6px;
+}
+
+.debug-toggle-row {
+    flex-direction: row;
+    align-items: center;
+    margin: 6px;
+}
+
+.debug-toggle-row Label {
+    color: var(--c-text);
+    font-size: 30px;
+    margin-left: 8px;
+}

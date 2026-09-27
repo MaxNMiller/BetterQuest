@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17763f6b6f8b1e04e9fdaee262df88e2, type: 3}
+  m_Name: Rest
+  m_EditorClassIdentifier: Spaa.Runtime::Spaa.Elements.ElementDefinition
+  element: 0
+  displayName: Rest
+  color: {r: 0.654902, g: 0.2, b: 0.8392157, a: 1}
+  arenaFogColor: {r: 0.654902, g: 0.2, b: 0.8392157, a: 1}
+  arenaGroundColor: {r: 0.654902, g: 0.2, b: 0.8392157, a: 1}
+  arenaLightColor: {r: 0.654902, g: 0.2, b: 0.8392157, a: 1}
+  icon: {fileID: 7388822144124034973, guid: 86d9963e2585d1847b2388c1a52ece61, type: 3}
+  tagline: Sleep, calm, recharge.

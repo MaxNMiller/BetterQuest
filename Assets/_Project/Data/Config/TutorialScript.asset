@@ -1,0 +1,501 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835cf09e870248d45aa148774404020c, type: 3}
+  m_Name: TutorialScript
+  m_EditorClassIdentifier: Spaa.Runtime::Spaa.Tutorial.TutorialScriptSO
+  steps:
+  - id: welcome
+    kind: 0
+    scene: 0
+    targetName: 
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Well met, hero! I am Wombino the Wise.
+    - In Better Quest you win battles by finishing real-life habits. Let me show you around.
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: therapy-1
+    kind: 0
+    scene: 0
+    targetName: 
+    holeTargetName: 
+    dock: 0
+    lines:
+    - THINK+SMART is a self-guided metabolic wellness program designed to improve mental health and brain function through nutrition and daily habits.
+    - Tap Learn more to read about the program.
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 1
+    showElements: 0
+  - id: therapy-2
+    kind: 0
+    scene: 0
+    targetName: 
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Better Quest turns those daily habits into a battle.
+    - Plan your habits, do them in real life, then log them here to attack!
+    footnote: Not medical advice. Follow your care team's guidance.
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: elements
+    kind: 0
+    scene: 0
+    targetName: 
+    holeTargetName: 
+    dock: 0
+    lines:
+    - 'Every habit belongs to one of five pillars:'
+    - 'Rest: sleep and quiet time. Self Care: looking after your body.'
+    - 'Food: what and when you eat. Rebuild: friends, feelings and reflection. Move: getting active.'
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 1
+  - id: foe
+    kind: 0
+    scene: 0
+    targetName: today-plaque
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Each day a new monster appears.
+    - 'It''s weak to one pillar: habits from that pillar hit twice as hard.'
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: open-journal
+    kind: 1
+    scene: 0
+    targetName: habit-menu-button
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Let's write your habits. Tap Habits.
+    footnote: 
+    transitions:
+    - on: 4
+      state: 2
+      toStepId: journal
+      replayOnly: 0
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 1
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: journal
+    kind: 0
+    scene: 0
+    targetName: habit-list-scroll
+    holeTargetName: 
+    dock: 0
+    lines:
+    - These starter habits fill every pillar.
+    - Tap any card later to rename it or change how often you do it.
+    footnote: 
+    transitions: []
+    resumeStepId: open-journal
+    lockSkipUntilFirstHabit: 1
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: add-habit
+    kind: 1
+    scene: 0
+    targetName: habit-add-button
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Now add one habit from your own plan. Tap New Habit.
+    - Every hero starts with one!
+    footnote: 
+    transitions:
+    - on: 5
+      state: 0
+      toStepId: write-name
+      replayOnly: 0
+    - on: 2
+      state: 0
+      toStepId: back-to-menu
+      replayOnly: 1
+    resumeStepId: open-journal
+    lockSkipUntilFirstHabit: 1
+    notYetLabel: Skip for now
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: write-name
+    kind: 1
+    scene: 0
+    targetName: habit-name-field
+    holeTargetName: habit-edit-card
+    dock: 1
+    lines:
+    - Write it the way you'd say it, like "Walk after lunch".
+    - Pick its pillar and how many times a day, then tap Save Habit.
+    footnote: 
+    transitions:
+    - on: 7
+      state: 0
+      toStepId: habit-saved
+      replayOnly: 0
+    - on: 6
+      state: 0
+      toStepId: add-habit
+      replayOnly: 0
+    - on: 2
+      state: 0
+      toStepId: back-to-menu
+      replayOnly: 1
+    resumeStepId: open-journal
+    lockSkipUntilFirstHabit: 1
+    notYetLabel: Skip for now
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: habit-saved
+    kind: 0
+    scene: 0
+    targetName: habit-list-scroll
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Wonderful! That habit is now one of your attacks.
+    - Every pillar needs at least one habit to battle. You can add more any time.
+    footnote: 
+    transitions: []
+    resumeStepId: play
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 4
+    showLearnMore: 0
+    showElements: 0
+  - id: back-to-menu
+    kind: 1
+    scene: 0
+    targetName: habit-menu-back-button
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Now let's meet today's monster. Tap Back.
+    footnote: 
+    transitions:
+    - on: 4
+      state: 1
+      toStepId: play
+      replayOnly: 0
+    resumeStepId: play
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: play
+    kind: 1
+    scene: 0
+    targetName: play-button
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Tap Battle! when you're ready.
+    footnote: 
+    transitions:
+    - on: 4
+      state: 3
+      toStepId: battle-intro
+      replayOnly: 0
+    - on: 10
+      state: 0
+      toStepId: rest-day
+      replayOnly: 0
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: battle-intro
+    kind: 0
+    scene: 1
+    targetName: nameplate
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Here's today's monster and its HP bar.
+    - Finish about 70% of today's habits to knock it out.
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: weakness
+    kind: 0
+    scene: 1
+    targetName: weakness-chip
+    holeTargetName: 
+    dock: 0
+    lines:
+    - This chip shows its weakness. Habits from that pillar deal double damage!
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: attack-sheet
+    kind: 0
+    scene: 1
+    targetName: attack-sheet
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Each button is one of your habits.
+    - Only tap one after you've really done it. That's the hero's honour code!
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: first-attack
+    kind: 1
+    scene: 1
+    targetName: attack-sheet
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Done one of these today already? Tap it to attack!
+    - If not, tap Not yet.
+    footnote: 
+    transitions:
+    - on: 8
+      state: 0
+      toStepId: hit
+      replayOnly: 0
+    - on: 2
+      state: 0
+      toStepId: come-back
+      replayOnly: 0
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: Not yet
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: hit
+    kind: 0
+    scene: 1
+    targetName: hp-bar-track
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Direct hit! Keep logging habits through the day to wear it down.
+    footnote: 
+    transitions:
+    - on: 0
+      state: 0
+      toStepId: wrap-up
+      replayOnly: 0
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 2
+    showLearnMore: 0
+    showElements: 0
+  - id: come-back
+    kind: 0
+    scene: 1
+    targetName: 
+    holeTargetName: 
+    dock: 0
+    lines:
+    - No rush. Come back after your first habit.
+    - The monster will wait for you.
+    footnote: 
+    transitions: []
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: wrap-up
+    kind: 0
+    scene: 1
+    targetName: 
+    holeTargetName: 
+    dock: 0
+    lines:
+    - If the monster is still standing at midnight, it hits back gently. There's no game over.
+    - Beat it to level up a pillar. Good luck, hero!
+    footnote: 
+    transitions:
+    - on: 0
+      state: 0
+      toStepId: 
+      replayOnly: 0
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 1
+    faceElement: 0
+    showLearnMore: 0
+    showElements: 0
+  - id: rest-day
+    kind: 0
+    scene: 0
+    targetName: today-plaque
+    holeTargetName: 
+    dock: 0
+    lines:
+    - Today's monster is already beaten! Your next one arrives tomorrow.
+    - Come back then and put your habits to work.
+    footnote: 
+    transitions:
+    - on: 0
+      state: 0
+      toStepId: 
+      replayOnly: 0
+    resumeStepId: 
+    lockSkipUntilFirstHabit: 0
+    notYetLabel: 
+    expression: 0
+    faceElement: 4
+    showLearnMore: 0
+    showElements: 0
+  playMissingHabitsLine: Every pillar needs a habit first. Tap Habits and add one for {0}.
+  playClaimRewardLine: Your reward is waiting! Tap Claim Reward.
+  replayPrompt: Shall I show you around again?
+  tips:
+  - id: tip-levelup
+    trigger: 4
+    scene: 1
+    afterFirstBattle: 0
+    callout:
+      id: tip-levelup
+      kind: 0
+      scene: 1
+      targetName: level-up-featured
+      holeTargetName: 
+      dock: 2
+      lines:
+      - Victory! Pick a pillar to level up.
+      - The recommended one is today's weakness. Stronger pillars hit harder.
+      footnote: 
+      transitions: []
+      resumeStepId: 
+      lockSkipUntilFirstHabit: 0
+      notYetLabel: 
+      expression: 0
+      faceElement: 4
+      showLearnMore: 0
+      showElements: 0
+  - id: tip-reminder
+    trigger: 5
+    scene: 1
+    afterFirstBattle: 0
+    callout:
+      id: tip-reminder
+      kind: 0
+      scene: 1
+      targetName: adjust-habits-button
+      holeTargetName: 
+      dock: 2
+      lines:
+      - Missing a day is okay. Every hero rests.
+      - If your plan felt too heavy, tap Adjust Habits to lighten it.
+      footnote: 
+      transitions: []
+      resumeStepId: 
+      lockSkipUntilFirstHabit: 0
+      notYetLabel: 
+      expression: 0
+      faceElement: 0
+      showLearnMore: 0
+      showElements: 0
+  - id: tip-progress
+    trigger: 1
+    scene: 0
+    afterFirstBattle: 1
+    callout:
+      id: tip-progress
+      kind: 0
+      scene: 0
+      targetName: dashboard-button
+      holeTargetName: 
+      dock: 1
+      lines:
+      - Tap Progress to see your Adventure Log.
+      - It shows your streaks and which pillars need some love.
+      footnote: 
+      transitions: []
+      resumeStepId: 
+      lockSkipUntilFirstHabit: 0
+      notYetLabel: 
+      expression: 0
+      faceElement: 0
+      showLearnMore: 0
+      showElements: 0
+  tipGotItLabel: Got it

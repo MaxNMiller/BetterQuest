@@ -1,0 +1,103 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Dashboard.uss" />
+    <ui:VisualElement name="dashboard-panel" class="dashboard-panel">
+        <ui:VisualElement class="dash-top">
+            <ui:VisualElement class="dash-header">
+                <ui:VisualElement class="icon icon--lg icon--star dash-header__icon" />
+                <ui:VisualElement class="dash-header__text">
+                    <ui:Label text="Adventure Log" class="t-h1" />
+                    <ui:Label name="dash-subtitle" text="" class="t-caption" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="dash-recap" class="surface-card dash-recap">
+                <ui:VisualElement class="element-badge element-badge--sm"><ui:VisualElement class="element-badge__icon el-icon" /></ui:VisualElement>
+                <ui:VisualElement class="dash-recap__text">
+                    <ui:Label text="TODAY'S RECAP" class="t-label" />
+                    <ui:Label name="dash-recap-line" text="" class="t-body-lg dash-recap__line" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="dash-list-wrap">
+            <ui:ScrollView name="dash-scroll" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" touch-scroll-type="Elastic" class="scroll dash-scroll">
+                <ui:VisualElement name="dash-empty" class="surface-card dash-card dash-empty">
+                    <ui:VisualElement class="icon icon--xl icon--book dash-empty__icon" />
+                    <ui:Label text="Your adventure log is empty" class="t-h2 dash-empty__title" />
+                    <ui:Label text="It fills in as you battle. Every habit you finish is written here!" class="t-body dash-empty__body" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="dash-streak-card" class="surface-card dash-card">
+                    <ui:VisualElement class="dash-streak">
+                        <ui:VisualElement class="dash-streak__main">
+                            <ui:Label name="dash-streak-count" text="0" class="t-num dash-streak__count" />
+                            <ui:VisualElement class="dash-streak__text">
+                                <ui:Label text="DAY STREAK" class="t-label dash-streak__label" />
+                                <ui:Label name="dash-streak-note" text="" class="t-caption" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="chip dash-streak__best">
+                            <ui:VisualElement class="icon icon--xs icon--star chip__icon dash-gold-icon" />
+                            <ui:Label name="dash-streak-best" text="Best 0" class="chip__label" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="dash-dots" class="dash-dots" />
+                    <ui:VisualElement class="dash-legend">
+                        <ui:VisualElement class="dash-legend__item"><ui:VisualElement class="dash-dot dash-dot--legend dash-dot--defeated" /><ui:Label text="Won" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-legend__item"><ui:VisualElement class="dash-dot dash-dot--legend dash-dot--partial" /><ui:Label text="Played" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-legend__item"><ui:VisualElement class="dash-dot dash-dot--legend dash-dot--missed" /><ui:Label text="Missed" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-legend__item"><ui:VisualElement class="dash-dot dash-dot--legend dash-dot--today" /><ui:Label text="Today" class="t-caption" /></ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="dash-damage-card" class="surface-card dash-card">
+                    <ui:VisualElement class="dash-section">
+                        <ui:VisualElement class="icon icon--sm icon--sword dash-gold-icon" />
+                        <ui:Label text="DAMAGE" class="section-header__name dash-section__name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="dash-tiles">
+                        <ui:VisualElement class="dash-tile"><ui:Label name="dash-damage-total" text="0" class="t-num dash-tile__value" /><ui:Label text="All time" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile"><ui:Label name="dash-damage-today" text="0" class="t-num dash-tile__value" /><ui:Label text="Today" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile"><ui:Label name="dash-damage-avg" text="0" class="t-num dash-tile__value" /><ui:Label text="Per day" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile"><ui:Label name="dash-damage-biggest" text="0" class="t-num dash-tile__value" /><ui:Label text="Biggest hit" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile"><ui:Label name="dash-damage-super" text="0%" class="t-num dash-tile__value" /><ui:Label text="Super effective" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile"><ui:Label name="dash-damage-hits" text="0" class="t-num dash-tile__value" /><ui:Label text="Attacks" class="t-caption" /></ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label text="LAST 7 DAYS" class="t-label dash-chart-title" />
+                    <ui:VisualElement name="dash-chart" class="dash-chart" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="dash-element-card" class="surface-card dash-card">
+                    <ui:VisualElement class="dash-section">
+                        <ui:VisualElement class="icon icon--sm icon--check dash-gold-icon" />
+                        <ui:Label text="HABITS BY ELEMENT" class="section-header__name dash-section__name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="dash-element-rows" class="dash-element-rows" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="dash-insight-card" class="surface-card dash-card">
+                    <ui:VisualElement class="dash-section">
+                        <ui:VisualElement class="icon icon--sm icon--heart dash-gold-icon" />
+                        <ui:Label text="HIGHLIGHTS" class="section-header__name dash-section__name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="dash-tiles">
+                        <ui:VisualElement class="dash-tile dash-tile--wide"><ui:Label name="dash-insight-wins" text="0 / 0" class="t-num dash-tile__value" /><ui:Label name="dash-insight-wins-caption" text="Monsters beaten" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile dash-tile--wide"><ui:Label name="dash-insight-habits" text="0" class="t-num dash-tile__value" /><ui:Label text="Habits completed" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile dash-tile--wide"><ui:Label name="dash-insight-best-day" text="-" class="t-num dash-tile__value" /><ui:Label name="dash-insight-best-day-caption" text="Best day" class="t-caption" /></ui:VisualElement>
+                        <ui:VisualElement class="dash-tile dash-tile--wide"><ui:Label name="dash-insight-hits-taken" text="0" class="t-num dash-tile__value" /><ui:Label text="Nights the monster hit back" class="t-caption" /></ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:ScrollView>
+            <ui:VisualElement class="fade-edge fade-edge--top-mask dash-mask" picking-mode="Ignore" />
+            <ui:VisualElement class="fade-edge fade-edge--bottom-mask dash-mask" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="surface-sheet dash-footer safe-bleed-bottom">
+            <ui:Button name="dash-close-button" class="btn btn--primary dash-footer__close">
+                <ui:VisualElement name="dash-close-icon" class="icon icon--sm icon--back" />
+                <ui:Label name="dash-close-label" text="Back" class="btn__label" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

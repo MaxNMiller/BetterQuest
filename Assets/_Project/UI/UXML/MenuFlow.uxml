@@ -1,0 +1,170 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="Dashboard" src="project://database/Assets/_Project/UI/UXML/Dashboard.uxml" />
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/MenuFlow.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Dashboard.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Tutorial.uss" />
+    <ui:VisualElement name="safe-area-root" class="safe-area-root menu-root">
+        <ui:VisualElement name="splash-panel" class="splash-panel">
+            <ui:VisualElement class="vignette" picking-mode="Ignore" />
+            <ui:Label name="splash-logo" text="Better Quest" class="t-display splash-logo" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="main-menu-panel" class="main-menu-panel safe-bleed-bottom">
+            <ui:VisualElement class="vignette" picking-mode="Ignore" />
+            <ui:VisualElement name="menu-title-block" class="menu-title-block" picking-mode="Ignore">
+                <ui:VisualElement name="menu-title" class="menu-title" picking-mode="Ignore">
+                    <ui:VisualElement class="menu-title__row" picking-mode="Ignore">
+                        <ui:VisualElement class="icon icon--md icon--star menu-title__star" />
+                        <ui:Label name="menu-title-line1" text="BETTER" class="t-display menu-title__line1" />
+                        <ui:VisualElement class="icon icon--md icon--star menu-title__star" />
+                    </ui:VisualElement>
+                    <ui:Label name="menu-title-line2" text="QUEST" class="t-display menu-title__line2" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="menu-spacer" picking-mode="Ignore" />
+
+            <ui:VisualElement name="today-plaque" class="surface-panel shadow-soft today-plaque">
+                <ui:VisualElement class="today-plaque__row">
+                    <ui:VisualElement name="today-gem" class="element-badge element-badge--md today-gem">
+                        <ui:VisualElement name="today-gem-icon" class="element-badge__icon el-icon" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="today-plaque__text">
+                        <ui:Label name="today-heading" text="TODAY'S FOE" class="t-label" />
+                        <ui:Label name="today-name" text="A monster stirs in the dungeon…" class="t-h2 today-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="today-chip" class="chip chip--weak today-chip">
+                        <ui:VisualElement class="chip__icon el-icon" />
+                        <ui:Label name="today-chip-label" text="WEAK" class="chip__label" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label name="today-detail" text="" class="t-caption today-detail" />
+                <ui:VisualElement name="today-missing" class="today-missing" />
+                <ui:Label name="play-blocked-label" text="" class="t-caption play-blocked-label" />
+            </ui:VisualElement>
+
+            <ui:Button name="play-button" class="btn btn--primary menu-button menu-button--primary">
+                <ui:VisualElement name="play-icon" class="icon icon--sm icon--sword" />
+                <ui:Label name="play-label" text="Battle!" class="btn__label" />
+            </ui:Button>
+            <ui:VisualElement class="menu-button-row">
+                <ui:Button name="habit-menu-button" class="btn btn--secondary menu-button menu-button--half menu-button--gap">
+                    <ui:VisualElement class="icon icon--sm icon--book" />
+                    <ui:Label text="Habits" class="btn__label" />
+                </ui:Button>
+                <ui:Button name="dashboard-button" class="btn btn--secondary menu-button menu-button--half">
+                    <ui:VisualElement class="icon icon--sm icon--star" />
+                    <ui:Label text="Progress" class="btn__label" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:Button name="quit-button" text="Quit" class="btn btn--ghost menu-button menu-button--quit" />
+            <ui:Button name="tutorial-help-button" class="btn btn--secondary tut-help-button" tooltip="Tutorial">
+                <ui:Label text="?" class="tut-help-button__label" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="habit-menu-panel" class="habit-menu-panel">
+            <ui:VisualElement class="icon icon--book journal-watermark" picking-mode="Ignore" />
+            <ui:VisualElement class="journal-top">
+                <ui:VisualElement class="journal-header">
+                    <ui:VisualElement class="icon icon--lg icon--book journal-header__icon" />
+                    <ui:VisualElement class="journal-header__text">
+                        <ui:Label text="Habit Journal" class="t-h1" />
+                        <ui:Label name="habit-summary" text="" class="t-caption" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label name="habit-missing-warning" text="" class="banner--warning banner__text journal-warning">
+                    <ui:VisualElement class="icon icon--sm icon--warning journal-warning__icon" />
+                </ui:Label>
+            </ui:VisualElement>
+            <ui:VisualElement class="journal-list-wrap">
+                <ui:ScrollView name="habit-list-scroll" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" touch-scroll-type="Elastic" class="scroll journal-scroll">
+                    <ui:VisualElement name="habit-list" class="habit-list" />
+                </ui:ScrollView>
+                <ui:VisualElement class="fade-edge fade-edge--top-mask journal-mask" picking-mode="Ignore" />
+                <ui:VisualElement class="fade-edge fade-edge--bottom-mask journal-mask" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement class="surface-sheet journal-footer safe-bleed-bottom">
+                <ui:Button name="habit-menu-back-button" class="btn btn--secondary journal-footer__back">
+                    <ui:VisualElement class="icon icon--sm icon--back" />
+                    <ui:Label text="Back" class="btn__label" />
+                </ui:Button>
+                <ui:Button name="habit-add-button" class="btn btn--primary journal-footer__add">
+                    <ui:VisualElement class="icon icon--sm icon--plus" />
+                    <ui:Label text="New Habit" class="btn__label" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:Instance template="Dashboard" name="dashboard-host" class="dashboard-host" />
+
+        <ui:VisualElement name="habit-edit-overlay" class="modal-scrim habit-edit-overlay">
+            <ui:VisualElement name="habit-edit-card" class="modal shadow-soft habit-edit-card">
+                <ui:VisualElement class="modal__corner modal__corner--tl" picking-mode="Ignore" />
+                <ui:VisualElement class="modal__corner modal__corner--tr" picking-mode="Ignore" />
+                <ui:VisualElement class="modal__corner modal__corner--br" picking-mode="Ignore" />
+                <ui:VisualElement class="modal__corner modal__corner--bl" picking-mode="Ignore" />
+
+                <ui:VisualElement class="modal__header">
+                    <ui:Label name="habit-edit-title" text="New Habit" class="modal__title" />
+                    <ui:Button name="habit-close-button" class="btn btn--icon modal__close">
+                        <ui:VisualElement class="icon icon--sm icon--close" />
+                    </ui:Button>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="field__header">
+                    <ui:Label text="NAME" class="t-label" />
+                    <ui:Label name="habit-name-counter" text="0/24" class="field__counter" />
+                </ui:VisualElement>
+                <ui:TextField name="habit-name-field" max-length="24" class="field habit-name-field" />
+                <ui:Label name="habit-edit-error" text="Give your habit a name." class="habit-edit-error">
+                    <ui:VisualElement class="icon icon--xs icon--warning habit-edit-error__icon" />
+                </ui:Label>
+
+                <ui:Label text="ELEMENT" class="t-label habit-edit-label" />
+                <ui:VisualElement name="habit-element-picker" class="habit-element-picker" />
+                <ui:Label name="habit-element-tagline" text="" class="t-caption habit-element-tagline" />
+
+                <ui:Label text="TIMES PER DAY" class="t-label habit-edit-label" />
+                <ui:VisualElement class="habit-times-row">
+                    <ui:Button name="habit-times-minus" text="" class="btn btn--icon habit-stepper-button">
+                        <ui:VisualElement class="icon icon--sm icon--minus" />
+                    </ui:Button>
+                    <ui:VisualElement name="habit-times-pips" class="pips habit-times-pips" />
+                    <ui:Label name="habit-times-value" text="1" class="t-h2 t-num habit-times-value" />
+                    <ui:Button name="habit-times-plus" text="" class="btn btn--icon habit-stepper-button">
+                        <ui:VisualElement class="icon icon--sm icon--plus" />
+                    </ui:Button>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="habit-edit-buttons" class="modal__footer habit-edit-buttons">
+                    <ui:Button name="habit-cancel-button" text="Cancel" class="btn btn--secondary" />
+                    <ui:Button name="habit-save-button" class="btn btn--primary">
+                        <ui:VisualElement class="icon icon--sm icon--check" />
+                        <ui:Label text="Save Habit" class="btn__label" />
+                    </ui:Button>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="habit-delete-confirm" class="habit-delete-confirm">
+                    <ui:Label name="habit-delete-question" text="Delete this habit?" class="t-body-lg habit-delete-question" />
+                    <ui:Label name="habit-delete-warning" text="" class="t-caption habit-delete-warning" />
+                    <ui:VisualElement class="modal__footer">
+                        <ui:Button name="habit-delete-keep" text="Keep" class="btn btn--secondary" />
+                        <ui:Button name="habit-delete-confirm-button" class="btn btn--danger habit-delete-confirm-button">
+                            <ui:VisualElement class="icon icon--sm icon--trash" />
+                            <ui:Label text="Delete" class="btn__label" />
+                        </ui:Button>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="habit-delete-divider" class="divider" />
+                <ui:Button name="habit-delete-button" class="btn btn--danger-ghost habit-delete-button">
+                    <ui:VisualElement class="icon icon--sm icon--trash" />
+                    <ui:Label text="Delete habit" class="btn__label" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

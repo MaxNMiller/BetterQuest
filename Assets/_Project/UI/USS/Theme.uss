@@ -1,0 +1,156 @@
+:root {
+    --c-bg-abyss: #07141D;
+    --c-bg-deep: #0B1D29;
+    --c-surface-1: #12283A;
+    --c-surface-1-a: rgba(18, 40, 58, 0.96);
+    --c-surface-2: #1D3444;
+    --c-surface-2-a: rgba(29, 52, 68, 0.94);
+    --c-surface-3: #274457;
+    --c-raised: #365769;
+    --c-raised-hi: #4A7085;
+    --c-raised-hi-a: rgba(74, 112, 133, 0.5);
+    --c-lip: #0E2130;
+    --c-stroke-dark: #081620;
+    --c-stroke-soft: rgba(246, 211, 154, 0.14);
+    --c-abyss-a: rgba(7, 20, 29, 0.6);
+    --c-abyss-chip: rgba(7, 20, 29, 0.7);
+
+    --c-gold: #E9A36C;
+    --c-gold-hi: #F6D39A;
+    --c-gold-lip: #A8653A;
+    --c-gold-a: rgba(233, 163, 108, 0.55);
+    --c-gold-thumb: rgba(233, 163, 108, 0.45);
+    --c-gold-select: rgba(233, 163, 108, 0.35);
+    --c-rune: rgba(233, 163, 108, 0.6);
+
+    --c-text: #F4EBD8;
+    --c-text-2: #AAB8C2;
+    --c-text-3: #71889A;
+    --c-text-on-gold: #2B1709;
+    --c-text-on-danger: #FFF4F0;
+    --c-text-shadow: rgba(8, 22, 32, 0.55);
+
+    --c-hp: #E66C77;
+    --c-hp-hi: #F59AA2;
+    --c-hp-low: #C9404E;
+    --c-shine: rgba(255, 255, 255, 0.22);
+    --c-xp: #8C73E8;
+    --c-success: #48C98B;
+    --c-danger: #E0525E;
+    --c-danger-hi: #F08A93;
+    --c-danger-lip: #8E2533;
+    --c-danger-text: #F49AA1;
+    --c-danger-a: rgba(224, 82, 94, 0.6);
+    --c-warning: #F2C14E;
+    --c-warning-a: rgba(242, 193, 78, 0.16);
+    --c-scrim: rgba(4, 12, 18, 0.74);
+    --c-flash: rgba(255, 255, 255, 0.5);
+    --c-clear: rgba(0, 0, 0, 0);
+
+    --el-rest: #A733D6;
+    --el-rest-deep: #3F1654;
+    --el-rest-glow: rgba(167, 51, 214, 0.45);
+    --el-selfcare: #3384D6;
+    --el-selfcare-deep: #133356;
+    --el-selfcare-glow: rgba(51, 132, 214, 0.45);
+    --el-food: #239C26;
+    --el-food-deep: #0E3F10;
+    --el-food-glow: rgba(35, 156, 38, 0.45);
+    --el-rebuild: #E7D225;
+    --el-rebuild-deep: #5E5410;
+    --el-rebuild-glow: rgba(231, 210, 37, 0.45);
+    --el-move: #D63333;
+    --el-move-deep: #561414;
+    --el-move-glow: rgba(214, 51, 51, 0.45);
+
+    --el: #AAB8C2;
+    --el-text: #AAB8C2;
+    --el-deep: #274457;
+    --el-glow: rgba(170, 184, 194, 0.3);
+}
+
+.el--rest { --el: #A733D6; --el-text: #D6A2F2; --el-deep: #3F1654; --el-glow: rgba(167, 51, 214, 0.45); }
+.el--selfcare { --el: #3384D6; --el-text: #86BFF5; --el-deep: #133356; --el-glow: rgba(51, 132, 214, 0.45); }
+.el--food { --el: #239C26; --el-text: #72D675; --el-deep: #0E3F10; --el-glow: rgba(35, 156, 38, 0.45); }
+.el--rebuild { --el: #E7D225; --el-text: #EEDF5E; --el-deep: #5E5410; --el-glow: rgba(231, 210, 37, 0.45); }
+.el--move { --el: #D63333; --el-text: #F48A8A; --el-deep: #561414; --el-glow: rgba(214, 51, 51, 0.45); }
+
+.safe-area-root {
+    flex-grow: 1;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Regular SDF.asset");
+    color: var(--c-text);
+}
+
+.t-display {
+    font-size: 112px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    color: var(--c-gold-hi);
+    -unity-text-outline-width: 6px;
+    -unity-text-outline-color: var(--c-stroke-dark);
+    text-shadow: 0 8px 0 var(--c-text-shadow);
+    -unity-text-align: middle-center;
+}
+
+.t-h1 {
+    font-size: 68px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    color: var(--c-text);
+}
+
+.t-h2 {
+    font-size: 52px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-SemiBold SDF.asset");
+    color: var(--c-text);
+}
+
+.t-button {
+    font-size: 46px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-Bold SDF.asset");
+    letter-spacing: 1px;
+}
+
+.t-body-lg {
+    font-size: 42px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text);
+}
+
+.t-body {
+    font-size: 38px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Regular SDF.asset");
+    color: var(--c-text);
+}
+
+.t-label {
+    font-size: 32px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-ExtraBold SDF.asset");
+    letter-spacing: 2px;
+    color: var(--c-text-2);
+}
+
+.t-caption {
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text-2);
+}
+
+.t-micro {
+    font-size: 28px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-text);
+}
+
+.t-num {
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Fredoka-SemiBold SDF.asset");
+}
+
+.t-clamp-2 {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -unity-text-overflow-position: end;
+}
+
+.shadow-soft {
+    filter: drop-shadow(0px 10px 18px rgba(4, 12, 18, 0.55));
+}

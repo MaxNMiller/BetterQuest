@@ -1,0 +1,564 @@
+
+.menu-root {
+    flex-grow: 1;
+    background-color: var(--c-clear);
+}
+
+.splash-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--c-bg-deep);
+}
+
+.splash-logo {
+    font-size: 128px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    width: 100%;
+}
+
+.splash-logo--image,
+.menu-title--image {
+    width: 88%;
+    max-height: 480px;
+    aspect-ratio: 1.82;
+    -unity-background-scale-mode: scale-to-fit;
+    filter: drop-shadow(0 10px 0 var(--c-text-shadow));
+}
+
+.is-short .menu-title--image {
+    width: 64%;
+}
+
+.main-menu-panel {
+    flex-grow: 1;
+    padding: 0 32px 48px 32px;
+    align-items: stretch;
+    display: none;
+}
+
+.menu-title-block {
+    margin-top: 152px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.menu-title {
+    align-items: center;
+}
+
+.menu-title__row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-title__line1 {
+    font-size: 128px;
+    margin: 0 16px;
+    padding: 0;
+}
+
+.menu-title__line2 {
+    font-size: 150px;
+    margin-top: -36px;
+    padding: 0;
+    letter-spacing: 6px;
+}
+
+.menu-title__star {
+    -unity-background-image-tint-color: var(--c-gold-hi);
+}
+
+.menu-title--image .menu-title__row,
+.menu-title--image .menu-title__line2 {
+    display: none;
+}
+
+.menu-spacer {
+    flex-grow: 1;
+    min-height: 32px;
+}
+
+.today-plaque {
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    flex-shrink: 0;
+}
+
+.today-plaque--success {
+    border-top-width: 4px;
+    border-top-color: var(--c-success);
+}
+
+.today-plaque__row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.today-plaque__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 28px;
+}
+
+.today-name {
+    white-space: normal;
+    margin-top: 4px;
+}
+
+.today-gem--neutral,
+.today-gem--success,
+.today-gem--warning {
+    border-radius: 20px;
+    border-width: 3px 3px 6px 3px;
+    filter: none;
+}
+
+.today-gem--neutral .element-badge__icon,
+.today-gem--success .element-badge__icon,
+.today-gem--warning .element-badge__icon {
+    width: 64%;
+    height: 64%;
+}
+
+.today-gem--neutral {
+    background-color: var(--c-surface-3);
+    border-color: var(--c-raised-hi) var(--c-raised-hi) var(--c-stroke-dark) var(--c-raised-hi);
+}
+
+.today-gem--neutral .element-badge__icon {
+    -unity-background-image-tint-color: var(--c-gold-hi);
+}
+
+.today-gem--success {
+    background-color: var(--c-success);
+    border-color: var(--c-success) var(--c-success) var(--c-stroke-dark) var(--c-success);
+}
+
+.today-gem--success .element-badge__icon {
+    -unity-background-image-tint-color: var(--c-stroke-dark);
+}
+
+.today-gem--warning {
+    background-color: var(--c-warning-a);
+    border-color: var(--c-warning) var(--c-warning) var(--c-stroke-dark) var(--c-warning);
+}
+
+.today-gem--warning .element-badge__icon {
+    -unity-background-image-tint-color: var(--c-warning);
+}
+
+.today-chip {
+    margin-left: 16px;
+}
+
+.today-detail {
+    margin-top: 16px;
+    white-space: normal;
+}
+
+.today-missing {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.today-missing__item {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 24px 8px 0;
+}
+
+.today-missing__item .el-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.play-blocked-label {
+    margin-top: 8px;
+    white-space: normal;
+    display: none;
+}
+
+.menu-button {
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.menu-button--primary {
+    min-height: 148px;
+}
+
+.menu-button--quit {
+    margin-bottom: 0;
+    min-height: 100px;
+}
+
+.menu-button-row {
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.menu-button--half {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 24px;
+}
+
+.menu-button--gap {
+    margin-right: 16px;
+}
+
+.is-short .menu-title-block {
+    margin-top: 144px;
+}
+
+.is-short .menu-button {
+    margin-bottom: 14px;
+}
+
+.habit-menu-panel {
+    flex-grow: 1;
+    background-color: var(--c-bg-deep);
+    display: none;
+}
+
+.journal-watermark {
+    display: none;
+    position: absolute;
+    width: 720px;
+    height: 720px;
+    right: -120px;
+    top: 30%;
+    -unity-background-image-tint-color: var(--c-surface-1);
+    rotate: -12deg;
+}
+
+.journal-top {
+    padding: 48px 32px 0 32px;
+    flex-shrink: 0;
+}
+
+.journal-header {
+    flex-direction: row;
+    align-items: center;
+}
+
+.journal-header__icon {
+    margin-right: 24px;
+    -unity-background-image-tint-color: var(--c-gold-hi);
+}
+
+.journal-header__text {
+    flex-shrink: 1;
+}
+
+.journal-warning {
+    margin-top: 24px;
+    padding-left: 100px;
+    min-height: 96px;
+    -unity-text-align: middle-left;
+    display: none;
+}
+
+.journal-warning__icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    margin-top: -28px;
+}
+
+.journal-list-wrap {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 16px;
+}
+
+.journal-scroll {
+    flex-grow: 1;
+}
+
+.journal-scroll .unity-scroll-view__content-container {
+    padding: 16px 32px 48px 32px;
+}
+
+.journal-mask {
+    -unity-background-image-tint-color: var(--c-bg-deep);
+}
+
+.habit-list {
+    flex-direction: column;
+}
+
+.journal-footer {
+    flex-direction: row;
+    flex-shrink: 0;
+    padding: 24px 32px 32px 32px;
+}
+
+.journal-footer__back {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 16px;
+}
+
+.journal-footer__add {
+    flex-grow: 1.8;
+    flex-basis: 0;
+}
+
+.card-root {
+    margin-bottom: 16px;
+}
+
+.habit-row {
+    flex-direction: row;
+    align-items: center;
+    min-height: 128px;
+    padding: 20px 24px;
+}
+
+.habit-row:hover {
+    background-color: var(--c-raised);
+}
+
+.habit-row__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 20px;
+}
+
+.habit-row__name {
+    max-height: 116px;
+}
+
+.habit-row__meta {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.habit-row__times {
+    margin-left: 12px;
+}
+
+.habit-row__edit {
+    -unity-background-image-tint-color: var(--c-text-2);
+}
+
+.row--empty {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 112px;
+    margin-bottom: 16px;
+    border-radius: 28px;
+    border-width: 3px;
+    border-color: var(--c-stroke-soft);
+    background-color: var(--c-clear);
+}
+
+.row--empty:hover {
+    background-color: var(--c-surface-1);
+}
+
+.row--empty .icon {
+    -unity-background-image-tint-color: var(--el);
+    margin-right: 16px;
+}
+
+.row--empty__label {
+    color: var(--c-text-2);
+    font-size: 38px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+}
+
+.journal-empty {
+    align-items: center;
+    padding: 96px 32px;
+}
+
+.journal-empty > .icon {
+    -unity-background-image-tint-color: var(--c-text-3);
+    margin-bottom: 32px;
+}
+
+.journal-empty__title {
+    -unity-text-align: middle-center;
+    margin-bottom: 12px;
+}
+
+.journal-empty__body {
+    -unity-text-align: middle-center;
+    white-space: normal;
+    margin-bottom: 48px;
+}
+
+.habit-edit-overlay {
+    display: none;
+}
+
+.habit-name-field {
+    margin: 0;
+}
+
+.habit-edit-error {
+    visibility: hidden;
+    margin-top: 12px;
+    padding-left: 52px;
+    min-height: 44px;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-Bold SDF.asset");
+    color: var(--c-danger-text);
+    -unity-text-align: middle-left;
+}
+
+.habit-edit-error__icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    -unity-background-image-tint-color: var(--c-danger);
+}
+
+.habit-edit-label {
+    margin: 24px 0 12px 0;
+}
+
+.habit-element-picker {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.element-tile {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 6px;
+    padding: 12px 4px;
+    min-height: 150px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border-width: 3px 3px 8px 3px;
+    background-color: var(--c-surface-3);
+    border-color: var(--c-raised-hi-a) var(--c-stroke-dark) var(--c-lip) var(--c-stroke-dark);
+}
+
+.element-tile:hover {
+    background-color: var(--c-raised);
+}
+
+.element-tile .el-icon {
+    width: 72px;
+    height: 72px;
+}
+
+.element-tile__name {
+    margin-top: 8px;
+    font-size: 28px;
+    -unity-font-definition: url("project://database/Assets/_Project/Fonts/FontAssets/Nunito-ExtraBold SDF.asset");
+    color: var(--c-text-2);
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+}
+
+.element-tile--selected,
+.element-tile--selected:hover {
+    background-color: var(--el-deep);
+    border-color: var(--c-gold-hi) var(--c-gold) var(--c-gold-lip) var(--c-gold);
+    border-width: 4px 4px 8px 4px;
+}
+
+.element-tile--selected .el-icon {
+    scale: 1.12 1.12;
+}
+
+.element-tile--selected .element-tile__name {
+    color: var(--el-text);
+}
+
+.habit-element-tagline {
+    margin-top: 16px;
+    -unity-text-align: middle-center;
+    color: var(--el-text);
+}
+
+.habit-times-row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.habit-times-pips {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.habit-times-pips .pip {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0 6px;
+}
+
+.habit-times-value {
+    width: 80px;
+    -unity-text-align: middle-center;
+    margin-right: 16px;
+}
+
+.habit-edit-buttons {
+    margin-top: 40px;
+}
+
+.habit-delete-confirm {
+    margin-top: 40px;
+    display: none;
+}
+
+.habit-delete-question {
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.habit-delete-warning {
+    margin-top: 12px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    color: var(--c-warning);
+}
+
+.habit-delete-confirm-button {
+    flex-grow: 1;
+    margin-left: 16px;
+}
+
+.habit-delete-button {
+    min-height: 100px;
+}
+
+.is-short .habit-element-tagline,
+.is-short .element-tile__name {
+    display: none;
+}
+
+.is-short .element-tile {
+    min-height: 110px;
+}
+
+.is-short .habit-edit-label {
+    margin: 16px 0 8px 0;
+}
+
+.is-short .habit-edit-buttons,
+.is-short .habit-delete-confirm {
+    margin-top: 24px;
+}
+
+.is-short .divider {
+    margin: 20px 0;
+}

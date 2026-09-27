@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><clipPath id="c"><path d="M64 114 C40 96 12 78 12 48 C12 30 26 16 44 16 C54 16 60 22 64 30 C68 22 74 16 84 16 C102 16 116 30 116 48 C116 78 88 96 64 114 Z"/></clipPath></defs>
+  <path d="M64 114 C40 96 12 78 12 48 C12 30 26 16 44 16 C54 16 60 22 64 30 C68 22 74 16 84 16 C102 16 116 30 116 48 C116 78 88 96 64 114 Z" fill="#FFFFFF"/>
+  <g clip-path="url(#c)"><circle cx="110" cy="116" r="56" fill="#D9E2E8"/></g>
+  <path d="M64 114 C40 96 12 78 12 48 C12 30 26 16 44 16 C54 16 60 22 64 30 C68 22 74 16 84 16 C102 16 116 30 116 48 C116 78 88 96 64 114 Z" fill="none" stroke="#081620" stroke-width="6" stroke-linejoin="round"/>
+  <g transform="rotate(-38 88 44)"><rect x="64" y="34" width="48" height="20" rx="8" fill="#FFFFFF" stroke="#081620" stroke-width="5"/><rect x="80" y="34" width="16" height="20" fill="#D9E2E8" stroke="#081620" stroke-width="3"/></g>
+</svg>

@@ -1,0 +1,59 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Tutorial.uss" />
+    <ui:VisualElement name="tut-root" class="tut-root" picking-mode="Ignore">
+        <ui:VisualElement name="tut-dim-0" class="tut-dim" />
+        <ui:VisualElement name="tut-dim-1" class="tut-dim" />
+        <ui:VisualElement name="tut-dim-2" class="tut-dim" />
+        <ui:VisualElement name="tut-dim-3" class="tut-dim" />
+        <ui:VisualElement name="tut-blocker" class="tut-blocker" />
+        <ui:VisualElement name="tut-ring" class="tut-ring" picking-mode="Ignore" />
+
+        <ui:VisualElement name="safe-area-root" class="tut-safe" picking-mode="Ignore">
+            <ui:VisualElement name="tut-dialogue" class="surface-panel shadow-soft tut-dialogue">
+                <ui:VisualElement name="tut-arrow-up" class="tut-arrow tut-arrow--up" picking-mode="Ignore" />
+                <ui:VisualElement class="tut-dialogue__header" picking-mode="Ignore">
+                    <ui:VisualElement name="tut-avatar" class="tut-avatar" picking-mode="Ignore">
+                        <ui:VisualElement name="tut-avatar-body" class="tut-avatar__body" picking-mode="Ignore">
+                            <ui:VisualElement name="tut-avatar-eye" class="tut-avatar__face" picking-mode="Ignore" />
+                            <ui:VisualElement name="tut-avatar-mouth" class="tut-avatar__face" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tut-dialogue__heading" picking-mode="Ignore">
+                        <ui:Label name="tut-name" text="Wombino the Wise" class="tut-name" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Button name="tut-skip" text="Skip tutorial" class="tut-skip" />
+                </ui:VisualElement>
+                <ui:VisualElement name="tut-lines" class="tut-lines" picking-mode="Ignore" />
+                <ui:VisualElement name="tut-elements" class="tut-elements" picking-mode="Ignore" />
+                <ui:Label name="tut-footnote" text="" class="tut-footnote" picking-mode="Ignore" />
+                <ui:VisualElement name="tut-buttons" class="tut-buttons">
+                    <ui:Button name="tut-learn-more" class="btn btn--secondary tut-button">
+                        <ui:Label text="Learn more" class="btn__label tut-button__label" />
+                    </ui:Button>
+                    <ui:Button name="tut-not-yet" class="btn btn--secondary tut-button">
+                        <ui:Label name="tut-not-yet-label" text="Not yet" class="btn__label tut-button__label" />
+                    </ui:Button>
+                    <ui:Button name="tut-next" class="btn btn--primary tut-button">
+                        <ui:Label name="tut-next-label" text="Next" class="btn__label tut-button__label" />
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="tut-arrow-down" class="tut-arrow tut-arrow--down" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="tut-prompt" class="surface-panel shadow-soft tut-prompt">
+                <ui:Label name="tut-prompt-name" text="Wombino the Wise" class="tut-name" picking-mode="Ignore" />
+                <ui:Label name="tut-prompt-text" text="" class="tut-line tut-prompt__text" picking-mode="Ignore" />
+                <ui:VisualElement class="tut-buttons">
+                    <ui:Button name="tut-prompt-no" class="btn btn--secondary tut-button">
+                        <ui:Label text="Not now" class="btn__label tut-button__label" />
+                    </ui:Button>
+                    <ui:Button name="tut-prompt-yes" class="btn btn--primary tut-button">
+                        <ui:Label text="Yes, please!" class="btn__label tut-button__label" />
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="project://database/Assets/_Project/UI/USS/Theme.uss" />
+    <Style src="project://database/Assets/_Project/UI/USS/Components.uss" />
+    <ui:VisualElement name="card-root" class="card-root">
+        <ui:VisualElement name="card-body" class="surface-card habit-row" />
+    </ui:VisualElement>
+</ui:UXML>
