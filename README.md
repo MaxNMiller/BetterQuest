@@ -1,4 +1,4 @@
-.## Getting started
+### Getting started
 
 1. Install **Unity 6000.6.0f1** (with iOS Build Support if you want iOS builds).
 2. Clone the repo with Git LFS enabled (`git lfs install` before cloning).
