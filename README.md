@@ -17,6 +17,9 @@ you can advance the day, force end of day, kill the monster, reset the save and 
 Build profiles for **Windows** (portrait window) and **iOS** (Xcode project export) are in
 `Assets/Settings/Build Profiles`. Use *File > Build Profiles*.
 
+## Official Releases
+Itch.io (https://maxnmiller.itch.io/better-quest).
+
 ## Project layout
 
 ```
@@ -31,4 +34,8 @@ Assets/_Project/
   Sounds/            music and SFX
 ```
 
+
+
 See [CREDITS.md](CREDITS.md).
+
+
